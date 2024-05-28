@@ -4,19 +4,26 @@ import java.util.*;
 
 public class Equipe {
 
-	Epreuve sesEpreuve;
-	Athlete sesAthlete;
-	Collection<Pays> SonPays;
+	private ArrayList<Epreuve> sesEpreuve = new ArrayList<Epreuve>();
+	private ArrayList<Athlete> sesAthlete = new ArrayList<Athlete>();
+	Pays SonPays;
 	private int idEquipe;
 	private String nomEquipe;
-	private static int nbEquipe;
+	private static int nbEquipe=0;
 
 	public Equipe(String nomEquipe) {
-		// TODO - implement Equipe.Equipe
-		throw new UnsupportedOperationException();
+		this.nomEquipe=nomEquipe;
+		idEquipe=nbEquipe++;
 	}
 	public void ajouteAthlete(Athlete athlete) {
 		throw new UnsupportedOperationException();
 	}
-
+	public Pays getSonPays() {
+		return SonPays;
+	}
+	public void setSonPays(Pays sonPays) {
+		SonPays = sonPays;
+	}
+	
+	
 }

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Medaille {
 
-	Collection<Epreuve> sonEpreuve;
+	Epreuve sonEpreuve;
 	private int idMedaille;
 	private String nomTypeMedaille;
 	private static int nbMedaille = 0;
@@ -17,13 +17,9 @@ public class Medaille {
 		return this.nomTypeMedaille;
 	}
 
-	/**
-	 * 
-	 * @param nomTypeMedaille
-	 */
 	public Medaille(String nomTypeMedaille) {
-		// TODO - implement Medaille.Medaille
-		throw new UnsupportedOperationException();
+		this.nomTypeMedaille=nomTypeMedaille;
+		idMedaille=nbMedaille++;
 	}
 
 }

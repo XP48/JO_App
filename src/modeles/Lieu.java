@@ -12,14 +12,10 @@ public class Lieu {
 		return this.idLieu;
 	}
 
-	/**
-	 * 
-	 * @param nomLieu
-	 * @param nbPlacesLieu
-	 */
 	public Lieu(String nomLieu, int nbPlacesLieu) {
-		// TODO - implement Lieu.Lieu
-		throw new UnsupportedOperationException();
+		this.nomLieu=nomLieu;
+		this.nbPlacesLieu=nbPlacesLieu;
+		idLieu=nbLieu++;
 	}
 
 }

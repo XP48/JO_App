@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Epreuve {
 
-	Medaille sesMedailles;
-	Collection<Lieu> sonLieu;
-	Equipe sesParticipants;
+	private ArrayList<Medaille> sesMedaille = new ArrayList<Medaille>();
+	Lieu sonLieu;
+	private ArrayList<Equipe> sesParticipants = new ArrayList<Equipe>();
 	private int idEpreuve;
 	private String nomEpreuve;
 	private String dateEpreuve;
@@ -39,25 +39,15 @@ public class Epreuve {
 		return this.heureFinEpreuve;
 	}
 
-	/**
-	 * 
-	 * @param nomEpreuve
-	 * @param dateEpreuve
-	 * @param heureDebutEpreuve
-	 * @param heureFinEpreuve
-	 */
 	public Epreuve(String nomEpreuve, String dateEpreuve, String heureDebutEpreuve, String heureFinEpreuve) {
-		// TODO - implement Epreuve.Epreuve
-		throw new UnsupportedOperationException();
+		this.nomEpreuve=nomEpreuve;
+		this.dateEpreuve=dateEpreuve;
+		this.heureDebutEpreuve=heureDebutEpreuve;
+		this.heureFinEpreuve=heureFinEpreuve;
 	}
 
-	/**
-	 * 
-	 * @param Medaille
-	 */
 	public void addMedaille(Medaille Medaille) {
-		// TODO - implement Epreuve.addMedaille
-		throw new UnsupportedOperationException();
+		sesMedaille.add(Medaille);
 	}
 
 }

@@ -1,8 +1,10 @@
 package modeles;
 
+import java.util.ArrayList;
+
 public class Athlete {
 
-	Equipe SesEquipe;
+	private ArrayList<Equipe> sesEquipe = new ArrayList<Equipe>();
 	private int idAthlete;
 	private String nomAthlete;
 	private String prenomAthlete;
@@ -19,15 +21,14 @@ public class Athlete {
 	public String getPrenomAthlete() {
 		return this.prenomAthlete;
 	}
-
-	/**
-	 * 
-	 * @param nomAthlete
-	 * @param prenomAthlete
-	 */
+	
 	public Athlete(String nomAthlete, String prenomAthlete) {
-		// TODO - implement Athlete.Athlete
-		throw new UnsupportedOperationException();
+		this.nomAthlete=nomAthlete;
+		this.prenomAthlete=prenomAthlete;
+		idAthlete=nbAthlete++;
+	}
+	public void ajouteEquipeA(Equipe e) {
+		sesEquipe.add(e);
 	}
 
 }

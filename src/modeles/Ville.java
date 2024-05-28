@@ -1,32 +1,32 @@
 package modeles;
 
+import java.util.ArrayList;
+
 public class Ville {
 
 	private int idVille;
 	private String nomVille;
 	private static int nbVille;
-	private Lieu Lieu;
-
+	private ArrayList<Lieu> sesLieux = new ArrayList<Lieu>();
 	public int getIdVille() {
 		return this.idVille;
 	}
 
-	/**
-	 * 
-	 * @param nomVille
-	 */
+	/*Ici on créer une ville et on lui attribue un id pour la démarquer*/
 	public Ville(String nomVille) {
-		// TODO - implement Ville.Ville
+		this.nomVille=nomVille;
+		idVille=nbVille++;
 		throw new UnsupportedOperationException();
 	}
+	
+	
+	public String getNomVille() {
+		return nomVille;
+	}
 
-	/**
-	 * 
-	 * @param Lieu
-	 */
+
 	public void addLieu(Lieu Lieu) {
-		// TODO - implement Ville.addLieu
-		throw new UnsupportedOperationException();
+		sesLieux.add(Lieu);
 	}
 
 }

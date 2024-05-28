@@ -1,11 +1,12 @@
 package modeles;
 
+import java.util.ArrayList;
+
 public class Pays {
-	Equipe SesEquipe;
+	private ArrayList<Equipe> sesEquipe = new ArrayList<Equipe>();
 	private int idPays;
 	private static int nbPays = 0;
 	private String nomPays;
-	private Equipe Equipe;
 
 	public int getIdPays() {
 		return this.idPays;
@@ -15,18 +16,14 @@ public class Pays {
 		return this.nomPays;
 	}
 
-	/**
-	 * 
-	 * @param nomPays
-	 */
 	public Pays(String nomPays) {
-		// TODO - implement Pays.Pays
-		throw new UnsupportedOperationException();
+		this.nomPays=nomPays;
+		idPays=nbPays++;
 	}
 
 	public void ajouteEquipe(Equipe Equipe) {
-		// TODO - implement Pays.ajouteEquipe
-		throw new UnsupportedOperationException();
+		sesEquipe.add(Equipe);
+		Equipe.setSonPays(this);
 	}
 
 }
