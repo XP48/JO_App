@@ -19,10 +19,6 @@ public class Epreuve {
 		return this.idEpreuve;
 	}
 
-	public void setIdEpreuve(int idEpreuve) {
-		this.idEpreuve = idEpreuve;
-	}
-
 	public String getNomEpreuve() {
 		return this.nomEpreuve;
 	}
@@ -38,6 +34,15 @@ public class Epreuve {
 	public String getHeureFinEpreuve() {
 		return this.heureFinEpreuve;
 	}
+	
+
+	public void setHeureDebutEpreuve(String heureDebutEpreuve) {
+		this.heureDebutEpreuve = heureDebutEpreuve;
+	}
+
+	public void setHeureFinEpreuve(String heureFinEpreuve) {
+		this.heureFinEpreuve = heureFinEpreuve;
+	}
 
 	public Epreuve(String nomEpreuve, String dateEpreuve, String heureDebutEpreuve, String heureFinEpreuve) {
 		this.nomEpreuve=nomEpreuve;
@@ -45,9 +50,4 @@ public class Epreuve {
 		this.heureDebutEpreuve=heureDebutEpreuve;
 		this.heureFinEpreuve=heureFinEpreuve;
 	}
-
-	public void addMedaille(Medaille Medaille) {
-		sesMedaille.add(Medaille);
-	}
-
 }

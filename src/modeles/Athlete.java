@@ -30,5 +30,8 @@ public class Athlete {
 	public void ajouteEquipeA(Equipe e) {
 		sesEquipe.add(e);
 	}
+	public void removeEquipeA(Equipe e) {
+		sesEquipe.remove(e);
+	}
 
 }

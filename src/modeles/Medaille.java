@@ -1,25 +1,24 @@
 package modeles;
 
-import java.util.*;
 
-public class Medaille {
+public abstract class Medaille {
 
 	Epreuve sonEpreuve;
-	private int idMedaille;
-	private String nomTypeMedaille;
-	private static int nbMedaille = 0;
+	protected int idMedaille;
+	protected String nomTypeMedaille;
+	protected static int nbMedaille = 0;
 
-	public int getIdMedaille() {
-		return this.idMedaille;
-	}
-
-	public String getNomTypeMedaille() {
-		return this.nomTypeMedaille;
-	}
-
-	public Medaille(String nomTypeMedaille) {
-		this.nomTypeMedaille=nomTypeMedaille;
+	public abstract int getIdMedaille();
+	public abstract String getNomTypeMedaille();
+	
+	
+	Medaille() {
 		idMedaille=nbMedaille++;
 	}
-
+	public void setNomTypeMedaille(String nomTypeMedaille)
+	{
+		this.nomTypeMedaille = nomTypeMedaille;
+	}
+	
+	
 }

@@ -16,8 +16,11 @@ public class Equipe {
 		idEquipe=nbEquipe++;
 	}
 	public void ajouteAthlete(Athlete athlete) {
-		throw new UnsupportedOperationException();
+		sesAthlete.add(athlete);
 	}
+	public void removeAthlete(Athlete athlete) {
+		sesAthlete.remove(athlete);
+	}	
 	public Pays getSonPays() {
 		return SonPays;
 	}
