@@ -16,15 +16,10 @@ public class Ville {
 	public Ville(String nomVille) {
 		this.nomVille=nomVille;
 		idVille=nbVille++;
-		throw new UnsupportedOperationException();
 	}
-	
-	
 	public String getNomVille() {
 		return nomVille;
 	}
-
-
 	public void addLieu(Lieu Lieu) {
 		sesLieux.add(Lieu);
 	}

@@ -21,9 +21,12 @@ public class Pays {
 		idPays=nbPays++;
 	}
 
-	public void ajouteEquipe(Equipe Equipe) {
+	public void ajouteEquipeP(Equipe Equipe) {
 		sesEquipe.add(Equipe);
 		Equipe.setSonPays(this);
+	}
+	public void removeEquipeP(Equipe Equipe) {
+		sesEquipe.remove(Equipe);
 	}
 
 }
