@@ -2,6 +2,8 @@ package vues;
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import controleurs.*;
 
 
 public class Accueil extends JPanel {
@@ -18,6 +20,8 @@ public class Accueil extends JPanel {
 	
 	
 	public Accueil() {
+				
+		EcouteurBtnEquipe clickEquipe = new EcouteurBtnEquipe(main);
 		
 		main.setLayout(new BorderLayout());
 		
@@ -26,6 +30,8 @@ public class Accueil extends JPanel {
 		Planning = new JTable(10,5);
 		
 		Equipes = new JButton("Equipes");
+		
+		Equipes.addActionListener(clickEquipe);
 		
 		Accueil = new JButton("Accueil");
 		Accueil.setEnabled(false);
@@ -40,7 +46,6 @@ public class Accueil extends JPanel {
 		
 		// Ajout de JPanel sur les cotes pour creer de la marge
 		main.add(top, BorderLayout.NORTH);
-		main.add(new JPanel(), BorderLayout.WEST);
 		
 	}
 	
