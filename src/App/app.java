@@ -15,9 +15,11 @@ public class app {
 		JFrame app = new JFrame("JO_APP");
 		
 		// Taille de la fenetre
-		app.setSize(780, 1080);
+		app.setSize(800, 200);
 		
 		// Demarrer en plein écran
+		app.setDefaultLookAndFeelDecorated(true);
+		app.setExtendedState(app.MAXIMIZED_BOTH);
 		
 		// Pour pouvoir fermer la fenetre
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
