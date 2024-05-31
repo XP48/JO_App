@@ -7,7 +7,7 @@ public class Session extends Epreuve {
 	private String heureFinEpreuve;
 	private String dateEpreuve;
 	private String nomSession;
-	protected static ArrayList<Epreuve> EpreuveExistante = new ArrayList<Epreuve>();
+	public static ArrayList<Epreuve> EpreuveExistante = new ArrayList<Epreuve>();
 	
 	
 	// probléme il y aura plein d'épreuve du mm nom genre 2 basket
@@ -19,6 +19,9 @@ public class Session extends Epreuve {
 		this.nomSession=nomSession;
 		super.ajouteSessionE(this);
 }
+	public String getnomSession() {
+		return this.nomSession;
+	}
 	
 	public String getHeureDebutEpreuve() {
 		return this.heureDebutEpreuve;
@@ -36,3 +39,4 @@ public class Session extends Epreuve {
 		this.heureFinEpreuve = heureFinEpreuve;
 	}
 }
+

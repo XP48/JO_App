@@ -15,6 +15,10 @@ public abstract class Epreuve {
 	private static int nbEpreuve = 0;
 	private Medaille Medaille;
 
+	public  String getnomEpreuve() {
+		return nomEpreuve;
+	}
+	
 	public int getIdEpreuve() {
 		return this.idEpreuve;
 	}
@@ -28,4 +32,5 @@ public abstract class Epreuve {
 	public void ajouteSessionE(Session s) {
 		sesSession.add(s);
 	}
+
 }
