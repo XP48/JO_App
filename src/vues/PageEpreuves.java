@@ -6,19 +6,21 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import controleurs.*;
 
-public class PageEquipes extends JPanel{
+public class PageEpreuves extends JPanel{
+	
+	JButton Equipes;
+	JButton Epreuves;
+	JButton Accueil;
 	
 	
 	public JPanel main = new JPanel();
-	JLabel t = new JLabel("test");
+	
+	public JPanel top = new JPanel();
+	
+	public JPanel PanneauCentral = new JPanel();
 		
-	public PageEquipes() {
+	public PageEpreuves() {
 			
-<<<<<<< HEAD
-			main.setLayout(new GridLayout(2,1));
-			main.add(t);
-			
-=======
 			//EcouteurBtnAccueil clickAccueil = new EcouteurBtnAccueil(main);
 		
 			main.setLayout(new BorderLayout());
@@ -31,19 +33,18 @@ public class PageEquipes extends JPanel{
 			Accueil = new JButton("Accueil");
 			//Accueil.addActionListener(clickAccueil);
 			
-			Equipes = new JButton("Equipes");
-			Equipes.setEnabled(false);
-
 			Epreuves = new JButton("Epreuves");
+			Epreuves.setEnabled(false);
+
+			Equipes = new JButton("Equipes");
 			
 			main.add(PanneauCentral, BorderLayout.CENTER);
 			
 			top.add(Accueil, BorderLayout.WEST);
-			top.add(Equipes, BorderLayout.CENTER);
-			top.add(Epreuves, BorderLayout.EAST);
+			top.add(Epreuves, BorderLayout.CENTER);
+			top.add(Equipes, BorderLayout.EAST);
 			
 			main.add(top, BorderLayout.NORTH);
->>>>>>> bb2c7444e05a1d58a5a026466bc068aef2d65a97
 			
 		}
 
