@@ -7,9 +7,6 @@ public class Equipe {
 	private ArrayList<Epreuve> sesEpreuve = new ArrayList<Epreuve>();
 	private ArrayList<Athlete> sesAthlete = new ArrayList<Athlete>();
 	public static ArrayList<Equipe> lesEquipes = new ArrayList<Equipe>();
-	
-	
-
 	Pays SonPays;
 	private int idEquipe;
 	private String nomEquipe;
@@ -34,9 +31,8 @@ public class Equipe {
 		return SonPays;
 	}
 	
-	public String getNomEquipe() {
-		return nomEquipe;
-	}
+	
+	
 	
 	public void setSonPays(Pays sonPays) {
 		SonPays = sonPays;

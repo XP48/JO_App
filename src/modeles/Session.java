@@ -19,9 +19,6 @@ public class Session extends Epreuve {
 		this.nomSession=nomSession;
 		super.ajouteSessionE(this);
 }
-	public String getnomSession() {
-		return this.nomSession;
-	}
 	
 	public String getHeureDebutEpreuve() {
 		return this.heureDebutEpreuve;

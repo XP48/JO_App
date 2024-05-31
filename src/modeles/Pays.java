@@ -23,6 +23,7 @@ public class Pays {
 
 	public void ajouteEquipeP(Equipe Equipe) {
 		sesEquipe.add(Equipe);
+		
 	}
 	public void removeEquipeP(Equipe Equipe) {
 		sesEquipe.remove(Equipe);
