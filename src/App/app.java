@@ -23,14 +23,16 @@ public class app {
 		// Pour pouvoir fermer la fenetre
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		Pays france = new Pays("France");
+		Equipe Bamako = new Equipe("E1",france);
+		
 		Accueil acc = new Accueil();
 		
 		app.add(acc.main);
 		app.pack();
 		app.setVisible(true);
 		
-		Pays france = new Pays("France");
-		Equipe Bamako = new Equipe("E1",france);
+		
 		
 		
 		

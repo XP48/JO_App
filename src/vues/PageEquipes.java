@@ -36,7 +36,12 @@ public class PageEquipes extends JPanel{
 			
 			String [] tabLivres = {"Au guet !", "La Huitieme Couleur", "Le Dernier Restaurant avant la fin du monde", "Le Guide du voyageur galactique", "Mortimer", "Sandman : Préludes et Nocturnes"};
 			
-			String[] tabEquipes = Equipe.lesEquipes.toArray(new String[Equipe.lesEquipes.size()]);
+				
+			String[] tabEquipes = new String[(Equipe.lesEquipes).size()];
+			 
+	        for (int i = 0; i < Equipe.lesEquipes.size(); i++) {
+	            tabEquipes[i] = Equipe.lesEquipes.get(i).getNomEquipe();
+	        }
 			
 			listeEquipe = new JList<String>(tabEquipes);
 			
