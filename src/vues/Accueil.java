@@ -30,6 +30,7 @@ public class Accueil extends JPanel {
 		
 		Equipes = new JButton("Equipes");
 		Equipes.addActionListener(clickEquipe);
+		
 		Epreuves = new JButton("Epreuves");
 		
 		Equipes.addActionListener(clickEquipe);

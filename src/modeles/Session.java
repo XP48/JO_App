@@ -7,12 +7,11 @@ public class Session extends Epreuve {
 	private String heureFinEpreuve;
 	private String dateEpreuve;
 	private String nomSession;
-	private static ArrayList<Epreuve> EpreuveExistante = new ArrayList<Epreuve>();
+	protected static ArrayList<Epreuve> EpreuveExistante = new ArrayList<Epreuve>();
 	
 	
 	// probléme il y aura plein d'épreuve du mm nom genre 2 basket
 	public Session(String nomEpreuve, String dateEpreuve, String heureDebutEpreuve, String heureFinEpreuve,String nomSession) {
-		
 		super(nomEpreuve);
 		this.dateEpreuve=dateEpreuve;
 		this.heureDebutEpreuve=heureDebutEpreuve;
