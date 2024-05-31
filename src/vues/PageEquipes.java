@@ -23,9 +23,12 @@ public class PageEquipes extends JPanel{
 	JList<String> listeEquipe;
 		
 	public PageEquipes() {
+		
+			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(main);
 			
 			main.setLayout(new BorderLayout());
 
+			CreerEquipe.addActionListener(clickCreationEquipe);
 			SupprimerEquipe.setEnabled(false);
 			
 			buttons.setLayout(new GridLayout(2, 1));
