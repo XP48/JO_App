@@ -29,15 +29,12 @@ public class Accueil extends JPanel {
 		top.setLayout(new BorderLayout());
 		
 		Equipes = new JButton("Equipes");
-<<<<<<< HEAD
 		Equipes.addActionListener(clickEquipe);
 
-=======
 		Epreuves = new JButton("Epreuves");
 		
 		Equipes.addActionListener(clickEquipe);
 		Epreuves.addActionListener(clickEquipe);
->>>>>>> bb2c7444e05a1d58a5a026466bc068aef2d65a97
 		
 		Accueil = new JButton("Accueil");
 		Accueil.addActionListener(clickPlanning);

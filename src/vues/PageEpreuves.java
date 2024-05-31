@@ -40,10 +40,10 @@ public class PageEpreuves extends JPanel{
 			
 			main.add(PanneauCentral, BorderLayout.CENTER);
 			
+			
 			top.add(Accueil, BorderLayout.WEST);
 			top.add(Epreuves, BorderLayout.CENTER);
 			top.add(Equipes, BorderLayout.EAST);
-			
 			main.add(top, BorderLayout.NORTH);
 			
 		}

@@ -30,6 +30,6 @@ public class app {
 		app.pack();
 		app.setVisible(true);
 		
+		
 	}
-
 }
