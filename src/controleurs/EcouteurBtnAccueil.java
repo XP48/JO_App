@@ -7,18 +7,16 @@ import vues.*;
 
 public class EcouteurBtnAccueil implements ActionListener {
 
-	Accueil pageAccueil;
-	JPanel old;
+	Accueil old;
+	Planning plan = new Planning();
 	
-	public EcouteurBtnAccueil(JPanel old) {
-		pageAccueil = new Accueil();
+	public EcouteurBtnAccueil(Accueil old) {
 		this.old = old;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		old.getParent().add(pageAccueil.main);
-		old.getParent().remove(old);
-		pageAccueil.main.updateUI();
+		old.changeView(plan.main);
+		plan.main.updateUI();
 	}
 	
 }

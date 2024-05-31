@@ -7,18 +7,17 @@ import vues.*;
 
 public class EcouteurBtnEquipe implements ActionListener {
 
-	PageEquipes pageEquipe;
-	JPanel old;
+	Accueil old;
+	PageEquipes pEquipe = new PageEquipes();
 	
-	public EcouteurBtnEquipe(JPanel old) {
-		pageEquipe = new PageEquipes();
+	public EcouteurBtnEquipe(Accueil old) {
 		this.old = old;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		old.getParent().add(pageEquipe.main);
-		old.getParent().remove(old);
-		pageEquipe.main.updateUI();
+		old.changeView(pEquipe.main);
+		pEquipe.main.updateUI();
+		
 	}
 	
 }

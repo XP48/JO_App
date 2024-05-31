@@ -8,7 +8,6 @@ import controleurs.*;
 
 public class Accueil extends JPanel {
 	
-	JTable Planning;
 	JButton Equipes;
 	JButton Epreuves;
 	JButton Accueil;
@@ -16,29 +15,27 @@ public class Accueil extends JPanel {
 	
 	public JPanel main = new JPanel();
 	
-	JPanel top = new JPanel();
+	public JPanel top = new JPanel();
 	
 	
 	public Accueil() {
-				
-		EcouteurBtnEquipe clickEquipe = new EcouteurBtnEquipe(main);
+			
+		EcouteurBtnEquipe clickEquipe = new EcouteurBtnEquipe(this);
+		
+		EcouteurBtnAccueil clickPlanning = new EcouteurBtnAccueil(this);
 		
 		main.setLayout(new BorderLayout());
 		
 		top.setLayout(new BorderLayout());
 		
-		Planning = new JTable(10,5);
-		
 		Equipes = new JButton("Equipes");
-		
 		Equipes.addActionListener(clickEquipe);
+
 		
 		Accueil = new JButton("Accueil");
-		Accueil.setEnabled(false);
+		Accueil.addActionListener(clickPlanning);
 		
 		Epreuves = new JButton("Epreuves");
-		
-		main.add(Planning, BorderLayout.CENTER);
 		
 		top.add(Equipes, BorderLayout.WEST);
 		top.add(Accueil, BorderLayout.CENTER);
@@ -49,5 +46,11 @@ public class Accueil extends JPanel {
 		
 	}
 	
+	
+	public void changeView(JPanel vue) {
+		main.removeAll();
+		main.add(top, BorderLayout.NORTH);
+		main.add(vue, BorderLayout.CENTER);
+	}
 	
 }

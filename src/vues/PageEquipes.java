@@ -8,43 +8,15 @@ import controleurs.*;
 
 public class PageEquipes extends JPanel{
 	
-	JButton Equipes;
-	JButton Epreuves;
-	JButton Accueil;
-	
 	
 	public JPanel main = new JPanel();
-	
-	public JPanel top = new JPanel();
-	
-	public JPanel PanneauCentral = new JPanel();
+	JLabel t = new JLabel("test");
 		
 	public PageEquipes() {
 			
-			EcouteurBtnAccueil clickAccueil = new EcouteurBtnAccueil(main);
-		
-			main.setLayout(new BorderLayout());
+			main.setLayout(new GridLayout(2,1));
+			main.add(t);
 			
-			top.setLayout(new BorderLayout());
-			
-			PanneauCentral.setLayout(new GridLayout(2,1));
-			
-			
-			Accueil = new JButton("Accueil");
-			Accueil.addActionListener(clickAccueil);
-			
-			Equipes = new JButton("Equipes");
-			Equipes.setEnabled(false);
-
-			Epreuves = new JButton("Epreuves");
-			
-			main.add(PanneauCentral, BorderLayout.CENTER);
-			
-			top.add(Accueil, BorderLayout.WEST);
-			top.add(Equipes, BorderLayout.CENTER);
-			top.add(Epreuves, BorderLayout.EAST);
-			
-			main.add(top, BorderLayout.NORTH);
 			
 		}
 
