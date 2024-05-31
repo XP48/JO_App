@@ -4,7 +4,10 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import controleurs.*;
+import modeles.*;
 
 public class PageEquipes extends JPanel{
 	
@@ -25,13 +28,17 @@ public class PageEquipes extends JPanel{
 
 			SupprimerEquipe.setEnabled(false);
 			
+			buttons.setLayout(new GridLayout(2, 1));
+			
 			buttons.add(CreerEquipe);
 			buttons.add(SupprimerEquipe);
 			
+			
 			String [] tabLivres = {"Au guet !", "La Huitieme Couleur", "Le Dernier Restaurant avant la fin du monde", "Le Guide du voyageur galactique", "Mortimer", "Sandman : Préludes et Nocturnes"};
 			
+			String[] tabEquipes = Equipe.lesEquipes.toArray(new String[Equipe.lesEquipes.size()]);
 			
-			listeEquipe = new JList<String>(tabLivres);
+			listeEquipe = new JList<String>(tabEquipes);
 			
 			
 			main.add(listeEquipe, BorderLayout.CENTER);
