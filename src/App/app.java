@@ -29,6 +29,10 @@ public class app {
 		app.pack();
 		app.setVisible(true);
 		
+		Pays france = new Pays("France");
+		Equipe Bamako = new Equipe("E1",france);
+		
+		
 		
 	}
 }
