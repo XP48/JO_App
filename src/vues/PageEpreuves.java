@@ -6,7 +6,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import controleurs.*;
 
-public class PageEquipes extends JPanel{
+public class PageEpreuves extends JPanel{
 	
 	JButton Equipes;
 	JButton Epreuves;
@@ -19,7 +19,7 @@ public class PageEquipes extends JPanel{
 	
 	public JPanel PanneauCentral = new JPanel();
 		
-	public PageEquipes() {
+	public PageEpreuves() {
 			
 			//EcouteurBtnAccueil clickAccueil = new EcouteurBtnAccueil(main);
 		
@@ -33,16 +33,16 @@ public class PageEquipes extends JPanel{
 			Accueil = new JButton("Accueil");
 			//Accueil.addActionListener(clickAccueil);
 			
-			Equipes = new JButton("Equipes");
-			Equipes.setEnabled(false);
-
 			Epreuves = new JButton("Epreuves");
+			Epreuves.setEnabled(false);
+
+			Equipes = new JButton("Equipes");
 			
 			main.add(PanneauCentral, BorderLayout.CENTER);
 			
 			top.add(Accueil, BorderLayout.WEST);
-			top.add(Equipes, BorderLayout.CENTER);
-			top.add(Epreuves, BorderLayout.EAST);
+			top.add(Epreuves, BorderLayout.CENTER);
+			top.add(Equipes, BorderLayout.EAST);
 			
 			main.add(top, BorderLayout.NORTH);
 			

@@ -9,7 +9,7 @@ public abstract class Epreuve {
 	private ArrayList<Equipe> sesParticipants = new ArrayList<Equipe>();
 	private ArrayList<Session> sesSession = new ArrayList<Session>();
 	private int idEpreuve;
-	private String nomEpreuve;
+	protected String nomEpreuve;
 	
 	
 	private static int nbEpreuve = 0;

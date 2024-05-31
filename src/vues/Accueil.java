@@ -30,13 +30,15 @@ public class Accueil extends JPanel {
 		Planning = new JTable(10,5);
 		
 		Equipes = new JButton("Equipes");
+		Epreuves = new JButton("Epreuves");
 		
 		Equipes.addActionListener(clickEquipe);
+		Epreuves.addActionListener(clickEquipe);
 		
 		Accueil = new JButton("Accueil");
 		Accueil.setEnabled(false);
 		
-		Epreuves = new JButton("Epreuves");
+		
 		
 		main.add(Planning, BorderLayout.CENTER);
 		
