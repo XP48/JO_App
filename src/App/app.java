@@ -18,8 +18,7 @@ public class app {
 		app.setSize(800, 200);
 		
 		// Demarrer en plein écran
-		app.setDefaultLookAndFeelDecorated(true);
-		app.setExtendedState(app.MAXIMIZED_BOTH);
+		app.setSize(1500, 1500);
 		
 		// Pour pouvoir fermer la fenetre
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

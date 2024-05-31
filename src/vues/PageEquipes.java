@@ -10,40 +10,33 @@ public class PageEquipes extends JPanel{
 	
 	
 	public JPanel main = new JPanel();
-	JLabel t = new JLabel("test");
+	
+	JPanel buttons = new JPanel();
+	
+	JButton CreerEquipe = new JButton("Créer une équipe");
+	JButton SupprimerEquipe = new JButton("Supprimer une équipe");
+	
+	
+	JList<String> listeEquipe;
 		
 	public PageEquipes() {
 			
-<<<<<<< HEAD
-			main.setLayout(new GridLayout(2,1));
-			main.add(t);
-			
-=======
-			//EcouteurBtnAccueil clickAccueil = new EcouteurBtnAccueil(main);
-		
 			main.setLayout(new BorderLayout());
-			
-			top.setLayout(new BorderLayout());
-			
-			PanneauCentral.setLayout(new GridLayout(2,1));
-			
-			
-			Accueil = new JButton("Accueil");
-			//Accueil.addActionListener(clickAccueil);
-			
-			Equipes = new JButton("Equipes");
-			Equipes.setEnabled(false);
 
-			Epreuves = new JButton("Epreuves");
+			SupprimerEquipe.setEnabled(false);
 			
-			main.add(PanneauCentral, BorderLayout.CENTER);
+			buttons.add(CreerEquipe);
+			buttons.add(SupprimerEquipe);
 			
-			top.add(Accueil, BorderLayout.WEST);
-			top.add(Equipes, BorderLayout.CENTER);
-			top.add(Epreuves, BorderLayout.EAST);
+			String [] tabLivres = {"Au guet !", "La Huitieme Couleur", "Le Dernier Restaurant avant la fin du monde", "Le Guide du voyageur galactique", "Mortimer", "Sandman : Préludes et Nocturnes"};
 			
-			main.add(top, BorderLayout.NORTH);
->>>>>>> bb2c7444e05a1d58a5a026466bc068aef2d65a97
+			
+			listeEquipe = new JList<String>(tabLivres);
+			
+			
+			main.add(listeEquipe, BorderLayout.CENTER);
+			
+			main.add(buttons, BorderLayout.EAST);
 			
 		}
 

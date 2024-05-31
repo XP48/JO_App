@@ -14,10 +14,11 @@ public class Planning extends JPanel {
 	
 	public Planning() {
 		
+		main.setLayout(new BorderLayout());
 		
 		Planning = new JTable(10,5);
 		
-		main.add(Planning);
+		main.add(Planning, BorderLayout.CENTER);
 		
 	}
 	
