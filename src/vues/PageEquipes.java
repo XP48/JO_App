@@ -24,7 +24,7 @@ public class PageEquipes extends JPanel{
 		
 	public PageEquipes() {
 		
-			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(main);
+			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(main, this);
 			
 			main.setLayout(new BorderLayout());
 
@@ -36,23 +36,23 @@ public class PageEquipes extends JPanel{
 			buttons.add(CreerEquipe);
 			buttons.add(SupprimerEquipe);
 			
+			//refreshListe();
 			
-			String [] tabLivres = {"Au guet !", "La Huitieme Couleur", "Le Dernier Restaurant avant la fin du monde", "Le Guide du voyageur galactique", "Mortimer", "Sandman : Préludes et Nocturnes"};
-			
-				
-			String[] tabEquipes = new String[(Equipe.lesEquipes).size()];
-			 
-	        for (int i = 0; i < Equipe.lesEquipes.size(); i++) {
-	            tabEquipes[i] = Equipe.lesEquipes.get(i).getNomEquipe();
-	        }
-			
-			listeEquipe = new JList<String>(tabEquipes);
-			
-			
-			main.add(listeEquipe, BorderLayout.CENTER);
+			//main.add(listeEquipe, BorderLayout.CENTER);
 			
 			main.add(buttons, BorderLayout.EAST);
 			
+			
 		}
+	public void refreshListe() {
+		String[] tabEquipes = new String[(Equipe.lesEquipes).size()];
+		 
+        for (int i = 0; i < Equipe.lesEquipes.size(); i++) {
+            tabEquipes[i] = Equipe.lesEquipes.get(i).getNomEquipe();
+        }
+		
+		listeEquipe = new JList<String>(tabEquipes);
+		main.add(listeEquipe, BorderLayout.CENTER);
+	}
 
 }

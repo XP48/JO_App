@@ -32,6 +32,9 @@ public class Equipe {
 	}
 	
 	
+	public String getNomEquipe() {
+		return nomEquipe;
+	}
 	
 	
 	public void setSonPays(Pays sonPays) {

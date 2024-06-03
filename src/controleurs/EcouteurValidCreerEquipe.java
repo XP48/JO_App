@@ -9,17 +9,19 @@ import App.app;
 
 public class EcouteurValidCreerEquipe implements ActionListener {
 	
-	String NomEquipe;
-	String Pays;
+	EcouteurBtnCreerEquipe data;
+	PageEquipes page;
 	
-	public EcouteurValidCreerEquipe(JTextField NomEquipe, JTextField Pays) {
-		this.NomEquipe = NomEquipe.getText();
-		this.Pays = Pays.getText();
+	public EcouteurValidCreerEquipe(EcouteurBtnCreerEquipe data, PageEquipes page) {
+		this.data = data;
+		this.page = page;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		new Equipe(NomEquipe, new Pays(Pays));
+		new Equipe(data.InputNom.getText(), new Pays(data.InputPays.getText()));
 		System.out.println("Equipe creee");
+		page.refreshListe();
+		page.updateUI();
 	}
 
 }
