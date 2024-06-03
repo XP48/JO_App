@@ -20,8 +20,10 @@ public class EcouteurValidCreerEquipe implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		new Equipe(data.InputNom.getText(), new Pays(data.InputPays.getText()));
 		System.out.println("Equipe creee");
+		data.InputNom.setText("");
+		data.InputPays.setText("");
 		page.refreshListe();
-		page.updateUI();
+		page.main.updateUI();
 	}
 
 }
