@@ -24,7 +24,7 @@ public class PageEquipes extends JPanel{
 		
 	public PageEquipes() {
 		
-			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(main, this);
+			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(this);
 			
 			main.setLayout(new BorderLayout());
 
@@ -53,6 +53,16 @@ public class PageEquipes extends JPanel{
         }
 		
 		listeEquipe = new JList<String>(tabEquipes);
+		
+		
+		ActionListener[] listeners = SupprimerEquipe.getActionListeners();
+		for (ActionListener listener : listeners) {
+			SupprimerEquipe.removeActionListener(listener);
+        }
+		
+		EcouteurBtnSupprimerEquipe clickSupprEquipe = new EcouteurBtnSupprimerEquipe(listeEquipe, this);
+		SupprimerEquipe.addActionListener(clickSupprEquipe);
+		
 		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(SupprimerEquipe);
 		listeEquipe.addListSelectionListener(clickListe);
 		main.add(listeEquipe, BorderLayout.CENTER);

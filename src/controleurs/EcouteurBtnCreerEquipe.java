@@ -10,21 +10,19 @@ import vues.*;
 
 public class EcouteurBtnCreerEquipe implements ActionListener {
 
-	JPanel panneau;
 	JButton valider = new JButton("Valider");
 	PageEquipes page;
 	JLabel titre = new JLabel("Entrez le nom de la nouvelle equipe :");
 	JTextField InputNom = new JTextField(20);
 	JTextField InputPays = new JTextField(20);
 	
-	public EcouteurBtnCreerEquipe(JPanel panneau, PageEquipes page) {
-		this.panneau = panneau;
+	public EcouteurBtnCreerEquipe(PageEquipes page) {
 		this.page = page;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		creerEquipe(panneau);
-		panneau.updateUI();
+		creerEquipe(page.main);
+		page.main.updateUI();
 	}
 	
 	private void creerEquipe(JPanel input) {

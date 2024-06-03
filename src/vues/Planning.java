@@ -33,11 +33,11 @@ public class Planning extends JPanel {
 		Planning.setValueAt("Samedi", 0, 5);
 		Planning.setValueAt("Dimanche", 0, 6);
 		
-		String[] tabSession = new String[(Session.EpreuveExistante).size()];
+		/*String[] tabSession = new String[(Session.EpreuveExistante).size()];
 		 
         for (int i = 0; i < Session.EpreuveExistante.size(); i++) {
             tabSession[i] = Session.EpreuveExistante.get(i).getnomEpreuve();
-        }
+        }*/
 	}
 	
 	
