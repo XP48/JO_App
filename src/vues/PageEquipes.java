@@ -20,7 +20,7 @@ public class PageEquipes extends JPanel{
 	JButton SupprimerEquipe = new JButton("Supprimer une équipe");
 	
 	
-	JList<String> listeEquipe;
+	JList<String> listeEquipe = new JList<String>();
 		
 	public PageEquipes() {
 		
@@ -36,15 +36,16 @@ public class PageEquipes extends JPanel{
 			buttons.add(CreerEquipe);
 			buttons.add(SupprimerEquipe);
 			
-			//refreshListe();
-			
-			//main.add(listeEquipe, BorderLayout.CENTER);
+			main.add(listeEquipe, BorderLayout.CENTER);
+			refreshListe();
+
 			
 			main.add(buttons, BorderLayout.EAST);
 			
 			
 		}
 	public void refreshListe() {
+		main.remove(listeEquipe);
 		String[] tabEquipes = new String[(Equipe.lesEquipes).size()];
 		 
         for (int i = 0; i < Equipe.lesEquipes.size(); i++) {
