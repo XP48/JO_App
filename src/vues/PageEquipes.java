@@ -53,6 +53,8 @@ public class PageEquipes extends JPanel{
         }
 		
 		listeEquipe = new JList<String>(tabEquipes);
+		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(SupprimerEquipe);
+		listeEquipe.addListSelectionListener(clickListe);
 		main.add(listeEquipe, BorderLayout.CENTER);
 	}
 
