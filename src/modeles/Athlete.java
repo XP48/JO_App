@@ -27,6 +27,7 @@ public class Athlete {
 		this.nomAthlete=nomAthlete;
 		this.prenomAthlete=prenomAthlete;
 		idAthlete=nbAthlete++;
+		lesAthletes.add(this);
 	}
 	public void ajouteEquipeA(Equipe e) {
 		sesEquipe.add(e);
