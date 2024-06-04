@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import controleurs.*;
 
 
+
 public class Accueil extends JPanel {
 	
 	JButton Equipes;

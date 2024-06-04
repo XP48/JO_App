@@ -1,7 +1,9 @@
 package vues;
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,8 +18,13 @@ public class PageEquipes extends JPanel{
 	
 	JPanel buttons = new JPanel();
 	
+	JPanel affichage = new JPanel();
+	
 	JButton CreerEquipe = new JButton("Créer une équipe");
-	JButton SupprimerEquipe = new JButton("Supprimer une équipe");
+	JButton SupprimerEquipe = new JButton("Supprimer l'équipe");
+	JButton AjouterAthlete = new JButton("Ajouter un athlète à l'équipe");
+	
+	JLabel titre = new JLabel("Nom de l'équipe | Nom du pays de l'équipe");
 	
 	
 	JList<String> listeEquipe = new JList<String>();
@@ -30,13 +37,16 @@ public class PageEquipes extends JPanel{
 
 			CreerEquipe.addActionListener(clickCreationEquipe);
 			SupprimerEquipe.setEnabled(false);
+			AjouterAthlete.setEnabled(false);
 			
-			buttons.setLayout(new GridLayout(2, 1));
+			buttons.setLayout(new GridLayout(3, 1));
 			
 			buttons.add(CreerEquipe);
 			buttons.add(SupprimerEquipe);
+			buttons.add(AjouterAthlete);
 			
-			main.add(listeEquipe, BorderLayout.CENTER);
+			//main.add(titre, BorderLayout.CENTER);
+			//main.add(listeEquipe, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune équipe
 			refreshListe();
 
 			
@@ -49,11 +59,13 @@ public class PageEquipes extends JPanel{
 		String[] tabEquipes = new String[(Equipe.lesEquipes).size()];
 		 
         for (int i = 0; i < Equipe.lesEquipes.size(); i++) {
-            tabEquipes[i] = Equipe.lesEquipes.get(i).getNomEquipe();
+            tabEquipes[i] = "Equipe " + Equipe.lesEquipes.get(i).getNomEquipe() + " du Pays " + Equipe.lesEquipes.get(i).getSonPays().getNomPays();
         }
 		
 		listeEquipe = new JList<String>(tabEquipes);
 		
+		listeEquipe.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		listeEquipe.setForeground(Color.BLUE);
 		
 		ActionListener[] listeners = SupprimerEquipe.getActionListeners();
 		for (ActionListener listener : listeners) {

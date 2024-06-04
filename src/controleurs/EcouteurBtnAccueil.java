@@ -16,7 +16,9 @@ public class EcouteurBtnAccueil implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		old.changeView(plan.main);
+		plan.rempliTableau();
 		plan.main.updateUI();
+		
 	}
 	
 }

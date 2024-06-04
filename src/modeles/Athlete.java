@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Athlete {
 
 	private ArrayList<Equipe> sesEquipe = new ArrayList<Equipe>();
+	public static ArrayList<Athlete> lesAthletes = new ArrayList<Athlete>();
 	private int idAthlete;
 	private String nomAthlete;
 	private String prenomAthlete;

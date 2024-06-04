@@ -20,9 +20,11 @@ public class EcouteurBtnSupprimerEquipe implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		int index = list.getSelectedIndex();
-		Equipe.lesEquipes.remove(index);
-		page.refreshListe();
-		page.main.updateUI();
+		if(index <= Equipe.lesEquipes.size()) {			
+			Equipe.lesEquipes.remove(index);
+			page.refreshListe();
+			page.main.updateUI();
+		}
 	}
 	
 }

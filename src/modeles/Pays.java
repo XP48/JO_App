@@ -2,6 +2,12 @@ package modeles;
 
 import java.util.ArrayList;
 
+/**
+ * Classe Pays
+ * @author atirant
+ *
+ */
+
 public class Pays {
 	private ArrayList<Equipe> sesEquipe = new ArrayList<Equipe>();
 	private int idPays;
