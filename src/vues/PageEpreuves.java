@@ -1,12 +1,15 @@
 package vues;
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
-import controleurs.*;
-import modeles.Equipe;
+import java.util.ArrayList;
 
+import controleurs.*;
+import modeles.*;
 public class PageEpreuves extends JPanel{
 	
 
@@ -27,13 +30,13 @@ public class PageEpreuves extends JPanel{
 			buttons.setLayout(new GridLayout(2, 1));
 			
 			main.add(listeEpreuve, BorderLayout.CENTER);
-			//refreshListe();
+			refreshListe();
 			
 			main.add(buttons, BorderLayout.EAST);
 			
 		}
 	
-	/*public void refreshListe() {
+	    public void refreshListe() {
 		main.remove(listeEpreuve);
 		String[] tabEpreuve = new String[(Epreuve.lesEpreuves).size()];
 		 
@@ -55,6 +58,6 @@ public class PageEpreuves extends JPanel{
 		EcouteurJListeEquipe clickListe = new EcouteurJListeEpreuve(SupprimerEpreuve);
 		listeEpreuve.addListSelectionListener(clickListe);
 		main.add(listeEpreuve, BorderLayout.CENTER);
-	}*/
+	}
 
 }
