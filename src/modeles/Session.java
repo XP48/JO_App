@@ -36,5 +36,8 @@ public class Session {
 	public String dateSession() {
 		return this.dateSession;
 	}
+	public String getNomSession() {
+		return nomSession;
+	}
 }
 
