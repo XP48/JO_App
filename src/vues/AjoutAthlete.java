@@ -28,11 +28,11 @@ public JPanel main = new JPanel();
 		
 	public AjoutAthlete() {
 		
-			//EcouteurBtnCreerAthlete clickCreationAthlete = new EcouteurBtnCreerAthlete(this);
+			EcouteurBtnCreerAthlete clickCreationAthlete = new EcouteurBtnCreerAthlete(this);
 			
 			main.setLayout(new BorderLayout());
 
-			//CreerAthlete.addActionListener(clickCreationAthlete);
+			CreerAthlete.addActionListener(clickCreationAthlete);
 			SupprimerAthlete.setEnabled(false);
 			AjouterAthlete.setEnabled(false);
 			
@@ -56,7 +56,7 @@ public JPanel main = new JPanel();
 		String[] tabAthletes = new String[(Athlete.lesAthletes).size()];
 		 
         for (int i = 0; i < Athlete.lesAthletes.size(); i++) {
-            tabAthletes[i] = "Athlete " + Athlete.lesAthletes.get(i).getPrenomAthlete() + " du Pays " + Athlete.lesAthletes.get(i).getNomAthlete();
+            tabAthletes[i] = "Athlete " + Athlete.lesAthletes.get(i).getPrenomAthlete() + " " + Athlete.lesAthletes.get(i).getNomAthlete();
         }
 		
 		listeAthlete = new JList<String>(tabAthletes);
@@ -74,14 +74,14 @@ public JPanel main = new JPanel();
 			AjouterAthlete.removeActionListener(listener);
         }
 		
-		//EcouteurBtnSupprimerAthlete clickSupprAthlete = new EcouteurBtnSupprimerAthlete(listeAthlete, this);
-		//SupprimerAthlete.addActionListener(clickSupprAthlete);
+		EcouteurBtnSupprimerAthlete clickSupprAthlete = new EcouteurBtnSupprimerAthlete(listeAthlete, this);
+		SupprimerAthlete.addActionListener(clickSupprAthlete);
 		
 		//EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeAthlete, this);
 		//AjouterAthlete.addActionListener(clickAjoutAthlete);
 		
-		//EcouteurJListeAthlete clickListe = new EcouteurJListeAthlete(this);
-		//listeAthlete.addListSelectionListener(clickListe);
+		EcouteurJListeAthlete clickListe = new EcouteurJListeAthlete(this);
+		listeAthlete.addListSelectionListener(clickListe);
 		main.add(listeAthlete, BorderLayout.CENTER);
 	}
 	
