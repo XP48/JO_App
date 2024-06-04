@@ -12,7 +12,8 @@ public class app {
 	public static void main(String[] args) {
 		
 		Epreuve Basket = new Epreuve ("Basket");
-		Session Basket1 = new Session (Basket, "10/06/24", "10h00", "10h30", "Final NBA");
+		Session Basket1 = new Session (Basket, "10/06/24", "10h00", "10h30", "Demi-Final NBA");
+		Session Basket2 = new Session (Basket, "10/06/24", "11h00", "11h30", "Final NBA");
 		// Creation de la fenetre de l'app
 		JFrame app = new JFrame("JO_APP");
 		
