@@ -80,7 +80,7 @@ public class PageEquipes extends JPanel{
 		EcouteurBtnSupprimerEquipe clickSupprEquipe = new EcouteurBtnSupprimerEquipe(listeEquipe, this);
 		SupprimerEquipe.addActionListener(clickSupprEquipe);
 		
-		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, this);
+		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, this, listeEquipe.getSelectedIndex());
 		AjouterAthlete.addActionListener(clickAjoutAthlete);
 		
 		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(this);

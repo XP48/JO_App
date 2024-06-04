@@ -25,9 +25,13 @@ public JPanel main = new JPanel();
 	
 	
 	JList<String> listeAthlete = new JList<String>();
+	
+	int indiceEquipe;
 		
-	public AjoutAthlete() {
-		
+	public AjoutAthlete(int indice) {
+			
+			this.indiceEquipe = indice;
+			
 			EcouteurBtnCreerAthlete clickCreationAthlete = new EcouteurBtnCreerAthlete(this);
 			
 			main.setLayout(new BorderLayout());
@@ -77,8 +81,8 @@ public JPanel main = new JPanel();
 		EcouteurBtnSupprimerAthlete clickSupprAthlete = new EcouteurBtnSupprimerAthlete(listeAthlete, this);
 		SupprimerAthlete.addActionListener(clickSupprAthlete);
 		
-		//EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeAthlete, this);
-		//AjouterAthlete.addActionListener(clickAjoutAthlete);
+		EcouteurBtnAjoutAthleteToEquipe clickAjoutAthleteToEquipe = new EcouteurBtnAjoutAthleteToEquipe(listeAthlete, this, indiceEquipe);
+		AjouterAthlete.addActionListener(clickAjoutAthleteToEquipe);
 		
 		EcouteurJListeAthlete clickListe = new EcouteurJListeAthlete(this);
 		listeAthlete.addListSelectionListener(clickListe);
