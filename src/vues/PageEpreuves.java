@@ -5,47 +5,56 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import controleurs.*;
+import modeles.Equipe;
 
 public class PageEpreuves extends JPanel{
 	
-	JButton Equipes;
-	JButton Epreuves;
-	JButton Accueil;
+
+	JButton CreerEpreuve = new JButton("Créer une épreuve");
+	JButton SupprimerEpreuve = new JButton("Supprimer une épreuve");
 	
+	JList<String> listeEpreuve = new JList<String>();
 	
 	public JPanel main = new JPanel();
 	
-	public JPanel top = new JPanel();
+	JPanel buttons = new JPanel();
 	
-	public JPanel PanneauCentral = new JPanel();
 		
 	public PageEpreuves() {
-			
-			//EcouteurBtnAccueil clickAccueil = new EcouteurBtnAccueil(main);
 		
 			main.setLayout(new BorderLayout());
 			
-			top.setLayout(new BorderLayout());
+			buttons.setLayout(new GridLayout(2, 1));
 			
-			PanneauCentral.setLayout(new GridLayout(2,1));
+			main.add(listeEpreuve, BorderLayout.CENTER);
+			//refreshListe();
 			
-			
-			Accueil = new JButton("Accueil");
-			//Accueil.addActionListener(clickAccueil);
-			
-			Epreuves = new JButton("Epreuves");
-			Epreuves.setEnabled(false);
-
-			Equipes = new JButton("Equipes");
-			
-			main.add(PanneauCentral, BorderLayout.CENTER);
-			
-			
-			top.add(Accueil, BorderLayout.WEST);
-			top.add(Epreuves, BorderLayout.CENTER);
-			top.add(Equipes, BorderLayout.EAST);
-			main.add(top, BorderLayout.NORTH);
+			main.add(buttons, BorderLayout.EAST);
 			
 		}
+	
+	/*public void refreshListe() {
+		main.remove(listeEpreuve);
+		String[] tabEpreuve = new String[(Epreuve.lesEpreuves).size()];
+		 
+        for (int i = 0; i < Epreuve.lesEpreuves.size(); i++) {
+        	tabEpreuve[i] = Epreuve.lesEpreuves.get(i).getNomEpreuve();
+        }
+		
+        listeEpreuve = new JList<String>(tabEpreuve);
+		
+		
+		ActionListener[] listeners = SupprimerEpreuve.getActionListeners();
+		for (ActionListener listener : listeners) {
+			//SupprimerEquipe.removeActionListener(listener);
+        }
+		
+		EcouteurBtnSupprimerEquipe clickSupprEquipe = new EcouteurBtnSupprimerEpreuve(listeEpreuve, this);
+		SupprimerEpreuve.addActionListener(clickSupprEpreuve);
+		
+		EcouteurJListeEquipe clickListe = new EcouteurJListeEpreuve(SupprimerEpreuve);
+		listeEpreuve.addListSelectionListener(clickListe);
+		main.add(listeEpreuve, BorderLayout.CENTER);
+	}*/
 
 }

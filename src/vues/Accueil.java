@@ -24,6 +24,8 @@ public class Accueil extends JPanel {
 		
 		EcouteurBtnAccueil clickPlanning = new EcouteurBtnAccueil(this);
 		
+		EcouteurBtnEpreuve clickEpreuve = new EcouteurBtnEpreuve(this);
+		
 		main.setLayout(new BorderLayout());
 		
 		top.setLayout(new BorderLayout());
@@ -32,9 +34,7 @@ public class Accueil extends JPanel {
 		Equipes.addActionListener(clickEquipe);
 		
 		Epreuves = new JButton("Epreuves");
-		
-		Equipes.addActionListener(clickEquipe);
-		Epreuves.addActionListener(clickEquipe);
+		Epreuves.addActionListener(clickEpreuve);
 		
 		Accueil = new JButton("Accueil");
 		Accueil.addActionListener(clickPlanning);
