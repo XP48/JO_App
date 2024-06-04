@@ -8,12 +8,12 @@ import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
 
-public class EcouteurBtnSupprimerEquipe implements ActionListener {
+public class EcouteurBtnAjoutAthlete implements ActionListener {
 	
 	JList<String> list;
 	PageEquipes page;
 	
-	public EcouteurBtnSupprimerEquipe(JList<String> list, PageEquipes page) {
+	public EcouteurBtnAjoutAthlete(JList<String> list, PageEquipes page) {
 		this.list = list;
 		this.page = page;
 	}
