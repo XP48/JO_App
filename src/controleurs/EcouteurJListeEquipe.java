@@ -13,14 +13,15 @@ import App.app;
 
 public class EcouteurJListeEquipe implements ListSelectionListener {
 	
-	JButton btn;
+	PageEquipes page;
 	
-	public EcouteurJListeEquipe(JButton btn) {
-		this.btn = btn;
+	public EcouteurJListeEquipe(PageEquipes page) {
+		this.page = page;
 	}
 	public void valueChanged(ListSelectionEvent e) {
 		//(((JList<String>)(e.getSource())).getSelectedValuesList())
-		btn.setEnabled(true);;
+		page.SupprimerEquipe.setEnabled(true);
+		page.AjouterAthlete.setEnabled(true);
 	}
 
 }

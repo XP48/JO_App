@@ -20,10 +20,23 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		int index = list.getSelectedIndex();
-		if(index <= Equipe.lesEquipes.size()) {			
-			Equipe.lesEquipes.remove(index);
-			page.refreshListe();
-			page.main.updateUI();
+		if(index <= Equipe.lesEquipes.size()) {
+			
+			
+			JFrame app = new JFrame("JO_APP");
+			
+			// Taille de la fenetre
+			app.setSize(800, 200);
+			
+			AjoutAthlete acc = new AjoutAthlete();;
+			
+			app.add(acc.main);
+			app.pack();
+			app.setVisible(true);
+			
+			//Equipe.lesEquipes.remove(index);
+			//page.refreshListe();
+			//page.main.updateUI();
 		}
 	}
 	

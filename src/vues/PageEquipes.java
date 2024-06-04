@@ -21,8 +21,8 @@ public class PageEquipes extends JPanel{
 	JPanel affichage = new JPanel();
 	
 	JButton CreerEquipe = new JButton("Créer une équipe");
-	JButton SupprimerEquipe = new JButton("Supprimer l'équipe");
-	JButton AjouterAthlete = new JButton("Ajouter un athlète à l'équipe");
+	public JButton SupprimerEquipe = new JButton("Supprimer l'équipe");
+	public JButton AjouterAthlete = new JButton("Ajouter un athlète à l'équipe");
 	
 	JLabel titre = new JLabel("Nom de l'équipe | Nom du pays de l'équipe");
 	
@@ -67,15 +67,23 @@ public class PageEquipes extends JPanel{
 		listeEquipe.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		listeEquipe.setForeground(Color.BLUE);
 		
-		ActionListener[] listeners = SupprimerEquipe.getActionListeners();
-		for (ActionListener listener : listeners) {
+		ActionListener[] listenersE = SupprimerEquipe.getActionListeners();
+		for (ActionListener listener : listenersE) {
 			SupprimerEquipe.removeActionListener(listener);
+        }
+		
+		ActionListener[] listenersA = AjouterAthlete.getActionListeners();
+		for (ActionListener listener : listenersA) {
+			AjouterAthlete.removeActionListener(listener);
         }
 		
 		EcouteurBtnSupprimerEquipe clickSupprEquipe = new EcouteurBtnSupprimerEquipe(listeEquipe, this);
 		SupprimerEquipe.addActionListener(clickSupprEquipe);
 		
-		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(SupprimerEquipe);
+		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, this);
+		AjouterAthlete.addActionListener(clickAjoutAthlete);
+		
+		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(this);
 		listeEquipe.addListSelectionListener(clickListe);
 		main.add(listeEquipe, BorderLayout.CENTER);
 	}
