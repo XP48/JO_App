@@ -21,8 +21,8 @@ public class EcouteurBtnCreerAthlete implements ActionListener {
 	public EcouteurBtnCreerAthlete(AjoutAthlete page) {
 		this.page = page;
 		this.valider = new JButton("Valider");
-		this.titre  = new JLabel("Entrez le nom de la nouvelle Athlete :");
-		this.titreAthlete = new JLabel("Entrez le nom du pays de la nouvelle Athlete :");
+		this.titre  = new JLabel("Entrez le nom de la nouvelle athlète :");
+		this.titreAthlete = new JLabel("Entrez le prénom du nouvel athlète :");
 		this.InputNom = new JTextField(20);
 		this.InputPrenom = new JTextField(20);
 	}

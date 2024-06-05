@@ -18,9 +18,13 @@ public class EcouteurValidCreerEpreuve implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		new Epreuve(data.InputNom.getText(), new Session(data.InputSession.getText()));
+		Epreuve E = new Epreuve(data.InputNom.getText());
+		new Session(E, data.Inputsession.getText(), data.InputDateSession.getText(), data.InputHeureDebSession.getText(), data.InputHeureFinSession.getText());
 		data.InputNom.setText("");
-		data.InputSession.setText("");
+		data.Inputsession.setText("");
+		data.InputDateSession.setText("");
+		data.InputHeureDebSession.setText("");
+		data.InputHeureFinSession.setText("");
 		page.refreshListe();
 		page.main.updateUI();
 	}
