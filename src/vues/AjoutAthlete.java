@@ -34,7 +34,6 @@ public JPanel main = new JPanel();
 			
 			this.indiceEquipe = indice;
 			this.app = app;
-			
 			AjouterAthlete = new JButton("Ajouter un athlète à l'équipe " + Equipe.lesEquipes.get(indiceEquipe).getNomEquipe());
 			
 			EcouteurBtnCreerAthlete clickCreationAthlete = new EcouteurBtnCreerAthlete(this);
@@ -54,7 +53,6 @@ public JPanel main = new JPanel();
 			//main.add(listeAthlete, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune équipe
 			refreshListe();
 
-			
 			main.add(buttons, BorderLayout.EAST);
 			
 			

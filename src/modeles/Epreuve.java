@@ -77,7 +77,7 @@ public class Epreuve implements Serializable{
 	}
 	
 	/**
-	 * retourne
+	 * retourne le nom de l'epreuve
 	 * @return
 	 */
 	public String getNomEpreuve() {

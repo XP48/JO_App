@@ -28,7 +28,6 @@ public class Accueil extends JPanel {
 		EcouteurBtnEpreuve clickEpreuve = new EcouteurBtnEpreuve(this);
 		
 		//EcouteurBtnEpreuve clickEpreuve = new EcouteurBtnEpreuve(this); !!!!! à décomenter
-		
 		main.setLayout(new BorderLayout());
 		
 		top.setLayout(new BorderLayout());
@@ -53,7 +52,10 @@ public class Accueil extends JPanel {
 		
 	}
 	
-	
+	/**
+	 * Méthode permettant de changer la fenetre afficher
+	 * @param vue
+	 */
 	public void changeView(JPanel vue) {
 		main.removeAll();
 		main.add(top, BorderLayout.NORTH);

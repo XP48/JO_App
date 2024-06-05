@@ -1,0 +1,31 @@
+package controleurs;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import vues.*;
+import modeles.*;
+import App.app;
+
+public class EcouteurValidCreerEquipe implements ActionListener {
+	
+	EcouteurBtnCreerEquipe data;
+	PageEquipes page;
+	
+	public EcouteurValidCreerEquipe(EcouteurBtnCreerEquipe data, PageEquipes page) {
+		this.data = data;
+		this.page = page;
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		Epreuve Rugby = new Epreuve ("Basket");
+		Session Rugby1 = new Session (Rugby, "30/07/24", "14", "15", "Demi-Final NBA");
+		Session Rugby2 = new Session (Rugby, "31/07/24", "16", "17", "Final NBA");
+		new Equipe(data.InputNom.getText(), new Pays(data.InputPays.getText()));
+		data.InputNom.setText("");
+		data.InputPays.setText("");
+		page.refreshListe();
+		page.main.updateUI();
+	}
+
+}
