@@ -22,6 +22,8 @@ public class EcouteurJListeEquipe implements ListSelectionListener {
 		//(((JList<String>)(e.getSource())).getSelectedValuesList())
 		page.SupprimerEquipe.setEnabled(true);
 		page.AjouterAthlete.setEnabled(true);
+		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, page, listeEquipe.getSelectedIndex());
+		AjouterAthlete.addActionListener(clickAjoutAthlete);
 	}
 
 }

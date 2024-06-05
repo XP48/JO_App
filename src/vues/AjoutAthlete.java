@@ -31,6 +31,7 @@ public JPanel main = new JPanel();
 	public AjoutAthlete(int indice) {
 			
 			this.indiceEquipe = indice;
+			System.out.println(indiceEquipe + "ici");
 			
 			EcouteurBtnCreerAthlete clickCreationAthlete = new EcouteurBtnCreerAthlete(this);
 			

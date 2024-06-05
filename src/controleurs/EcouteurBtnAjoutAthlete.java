@@ -18,6 +18,7 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 		this.list = list;
 		this.page = page;
 		this.indiceEquipe = indice;
+		System.out.println(indiceEquipe);
 	}
 
 	public void actionPerformed(ActionEvent e) {

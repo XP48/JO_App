@@ -1,4 +1,4 @@
-package vues;
+/*package vues;
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -83,9 +83,9 @@ public class PageEquipes extends JPanel{
 		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, this, listeEquipe.getSelectedIndex());
 		AjouterAthlete.addActionListener(clickAjoutAthlete);
 		
-		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(this);
+		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(listeEquipe, this, listeEquipe.getSelectedIndex(), AjouterAthlete);
 		listeEquipe.addListSelectionListener(clickListe);
 		main.add(listeEquipe, BorderLayout.CENTER);
 	}
 
-}
+}*/
