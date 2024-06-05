@@ -1,7 +1,7 @@
 package modeles;
 
 /**
- * Createur d'objet MedailleArgent abstrait de la classe medaille
+ * Classe MedailleArgent abstraite de la classe medaille
  * @author atirant
  *
  */

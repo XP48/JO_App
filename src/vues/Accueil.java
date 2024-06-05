@@ -26,7 +26,6 @@ public class Accueil extends JPanel {
 		EcouteurBtnAccueil clickPlanning = new EcouteurBtnAccueil(this);
 		
 		//EcouteurBtnEpreuve clickEpreuve = new EcouteurBtnEpreuve(this); !!!!! à décomenter
-		
 		main.setLayout(new BorderLayout());
 		
 		top.setLayout(new BorderLayout());

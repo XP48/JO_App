@@ -1,7 +1,7 @@
 package modeles;
 
 /**
- * Createur d'objet MedailleOr abstrait de la classe medaille
+ * Classe MedailleOr abstraite de la classe medaille
  * @author atirant
  *
  */
@@ -27,6 +27,7 @@ public class MedailleOr extends Medaille{
 	public int getIdMedaille() {
 		return super.idMedaille;
 	}
+	
 	public String getNomTypeMedaille() {
 		return super.nomTypeMedaille;
 	}

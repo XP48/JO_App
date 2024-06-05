@@ -1,5 +1,4 @@
 package modeles;
-
 import java.util.ArrayList;
 
 /**
@@ -7,6 +6,7 @@ import java.util.ArrayList;
  * @author atirant
  *
  */
+
 public class Athlete {
 	
 	//--------------------------
@@ -14,6 +14,7 @@ public class Athlete {
 	//--------------------------
 	private ArrayList<Equipe> sesEquipe = new ArrayList<Equipe>();
 	public static ArrayList<Athlete> lesAthletes = new ArrayList<Athlete>();
+	private Pays sonPays;
 	private int idAthlete;
 	private String nomAthlete;
 	private String prenomAthlete;
@@ -50,6 +51,10 @@ public class Athlete {
 	 */
 	public void removeEquipeA(Equipe e) {
 		sesEquipe.remove(e);
+	}
+	
+	public void ajouteSonPays(Pays p) {
+		this.sonPays=sonPays;
 	}
 	//--------------------------
 	// ACCESSEURS

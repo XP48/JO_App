@@ -11,7 +11,7 @@ public class app {
 
 	public static void main(String[] args) {
 		Athlete p = new Athlete("Portal", "Kylian");
-		Equipe e = new Equipe("test", new Pays("t"));
+		Equipe e = new Equipe("Gentle mates", new Pays("France"));
 		Epreuve Basket = new Epreuve ("Basket");
 		Session Basket1 = new Session (Basket, "06/06/24", "14", "15", "Demi-Final NBA");
 		Session Basket2 = new Session (Basket, "08/06/24", "16", "17", "Final NBA");
@@ -30,7 +30,6 @@ public class app {
 		Accueil acc = new Accueil();
 		
 		app.add(acc.main);
-		app.pack();
 		app.setVisible(true);
 		
 		
