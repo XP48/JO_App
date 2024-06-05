@@ -1,4 +1,4 @@
-/*package vues;
+package vues;
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -64,7 +64,7 @@ public class PageEquipes extends JPanel{
 		
 		listeEquipe = new JList<String>(tabEquipes);
 		
-		listeEquipe.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		listeEquipe.setFont(new Font("Arial", Font.BOLD, 14));
 		listeEquipe.setForeground(Color.BLUE);
 		
 		ActionListener[] listenersE = SupprimerEquipe.getActionListeners();
@@ -72,20 +72,12 @@ public class PageEquipes extends JPanel{
 			SupprimerEquipe.removeActionListener(listener);
         }
 		
-		ActionListener[] listenersA = AjouterAthlete.getActionListeners();
-		for (ActionListener listener : listenersA) {
-			AjouterAthlete.removeActionListener(listener);
-        }
-		
 		EcouteurBtnSupprimerEquipe clickSupprEquipe = new EcouteurBtnSupprimerEquipe(listeEquipe, this);
 		SupprimerEquipe.addActionListener(clickSupprEquipe);
 		
-		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, this, listeEquipe.getSelectedIndex());
-		AjouterAthlete.addActionListener(clickAjoutAthlete);
-		
-		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(listeEquipe, this, listeEquipe.getSelectedIndex(), AjouterAthlete);
+		EcouteurJListeEquipe clickListe = new EcouteurJListeEquipe(listeEquipe, this);
 		listeEquipe.addListSelectionListener(clickListe);
 		main.add(listeEquipe, BorderLayout.CENTER);
 	}
 
-}*/
+}

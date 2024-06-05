@@ -14,16 +14,24 @@ import App.app;
 public class EcouteurJListeEquipe implements ListSelectionListener {
 	
 	PageEquipes page;
+	JList<String> listeEquipe;
 	
-	public EcouteurJListeEquipe(PageEquipes page) {
+	public EcouteurJListeEquipe(JList<String> listeEquipe, PageEquipes page) {
 		this.page = page;
+		this.listeEquipe = listeEquipe;
 	}
 	public void valueChanged(ListSelectionEvent e) {
 		//(((JList<String>)(e.getSource())).getSelectedValuesList())
 		page.SupprimerEquipe.setEnabled(true);
 		page.AjouterAthlete.setEnabled(true);
+		ActionListener[] listenersA = page.AjouterAthlete.getActionListeners();
+		
+		for (ActionListener listener : listenersA) {
+			page.AjouterAthlete.removeActionListener(listener);
+        }
+		
 		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, page, listeEquipe.getSelectedIndex());
-		AjouterAthlete.addActionListener(clickAjoutAthlete);
+		page.AjouterAthlete.addActionListener(clickAjoutAthlete);
 	}
 
 }
