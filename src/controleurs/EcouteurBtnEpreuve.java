@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 
 import vues.Accueil;
 import vues.PageEpreuves;
-import vues.PageEquipes;
+import vues.PageEpreuves;
 
 public class EcouteurBtnEpreuve implements ActionListener {
 

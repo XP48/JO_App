@@ -52,10 +52,10 @@ public class PageEpreuves extends JPanel{
 			//SupprimerEquipe.removeActionListener(listener);
         }
 		
-		EcouteurBtnSupprimerEquipe clickSupprEquipe = new EcouteurBtnSupprimerEpreuve(listeEpreuve, this);
+		EcouteurBtnSupprimerEpreuve clickSupprEpreuve = new EcouteurBtnSupprimerEpreuve(listeEpreuve, this);
 		SupprimerEpreuve.addActionListener(clickSupprEpreuve);
 		
-		EcouteurJListeEquipe clickListe = new EcouteurJListeEpreuve(SupprimerEpreuve);
+		EcouteurJListeEpreuve clickListe = new EcouteurJListeEpreuve(SupprimerEpreuve);
 		listeEpreuve.addListSelectionListener(clickListe);
 		main.add(listeEpreuve, BorderLayout.CENTER);
 	}
