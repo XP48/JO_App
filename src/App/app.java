@@ -19,7 +19,7 @@ public class app {
 		JFrame app = new JFrame("JO_APP");
 		
 		// Taille de la fenetre
-		app.setSize(800, 200);
+		app.setSize(1920, 1080);
 		
 		// Pour pouvoir fermer la fenetre
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -51,7 +51,10 @@ public class Accueil extends JPanel {
 		
 	}
 	
-	
+	/**
+	 * Méthode permettant de changer la fenetre afficher
+	 * @param vue
+	 */
 	public void changeView(JPanel vue) {
 		main.removeAll();
 		main.add(top, BorderLayout.NORTH);
