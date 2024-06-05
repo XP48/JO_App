@@ -17,9 +17,9 @@ public JPanel main = new JPanel();
 	
 	JPanel affichage = new JPanel();
 	
-	JButton CreerAthlete = new JButton("Créer une équipe");
-	public JButton SupprimerAthlete = new JButton("Supprimer l'équipe");
-	public JButton AjouterAthlete = new JButton("Ajouter un athlète à l'équipe");
+	JButton CreerAthlete = new JButton("Créer un athlète");
+	public JButton SupprimerAthlete = new JButton("Supprimer l'athlète");
+	public JButton AjouterAthlete;
 	
 	JLabel titre = new JLabel("Nom de l'équipe | Nom du pays de l'équipe");
 	
@@ -27,10 +27,15 @@ public JPanel main = new JPanel();
 	JList<String> listeAthlete = new JList<String>();
 	
 	int indiceEquipe;
+	
+	JFrame app;
 		
-	public AjoutAthlete(int indice) {
+	public AjoutAthlete(int indice, JFrame app) {
 			
 			this.indiceEquipe = indice;
+			this.app = app;
+			
+			AjouterAthlete = new JButton("Ajouter un athlète à l'équipe " + Equipe.lesEquipes.get(indiceEquipe).getNomEquipe());
 			
 			EcouteurBtnCreerAthlete clickCreationAthlete = new EcouteurBtnCreerAthlete(this);
 			
@@ -45,7 +50,6 @@ public JPanel main = new JPanel();
 			buttons.add(CreerAthlete);
 			buttons.add(SupprimerAthlete);
 			buttons.add(AjouterAthlete);
-			System.out.println(Athlete.lesAthletes.size());
 			//main.add(titre, BorderLayout.CENTER);
 			//main.add(listeAthlete, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune équipe
 			refreshListe();
@@ -65,7 +69,7 @@ public JPanel main = new JPanel();
 		
 		listeAthlete = new JList<String>(tabAthletes);
 		
-		listeAthlete.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		listeAthlete.setFont(new Font("Arial", Font.BOLD, 14));
 		listeAthlete.setForeground(Color.BLUE);
 		
 		ActionListener[] listenersE = SupprimerAthlete.getActionListeners();
@@ -81,7 +85,7 @@ public JPanel main = new JPanel();
 		EcouteurBtnSupprimerAthlete clickSupprAthlete = new EcouteurBtnSupprimerAthlete(listeAthlete, this);
 		SupprimerAthlete.addActionListener(clickSupprAthlete);
 		
-		EcouteurBtnAjoutAthleteToEquipe clickAjoutAthleteToEquipe = new EcouteurBtnAjoutAthleteToEquipe(listeAthlete, this, indiceEquipe);
+		EcouteurBtnAjoutAthleteToEquipe clickAjoutAthleteToEquipe = new EcouteurBtnAjoutAthleteToEquipe(listeAthlete, this, indiceEquipe, app);
 		AjouterAthlete.addActionListener(clickAjoutAthleteToEquipe);
 		
 		EcouteurJListeAthlete clickListe = new EcouteurJListeAthlete(this);

@@ -30,7 +30,7 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 			// Taille de la fenetre
 			app.setSize(800, 200);
 			
-			AjoutAthlete acc = new AjoutAthlete(indiceEquipe);;
+			AjoutAthlete acc = new AjoutAthlete(indiceEquipe, app);
 			
 			app.add(acc.main);
 			app.pack();
