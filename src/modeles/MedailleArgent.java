@@ -1,7 +1,7 @@
 package modeles;
 
 /**
- * Createur d'objet abstrait de la classe medaille
+ * Createur d'objet MedailleArgent abstrait de la classe medaille
  * @author atirant
  *
  */
@@ -18,7 +18,7 @@ public class MedailleArgent extends Medaille {
 	// CONSTRUCTEUR
 	//--------------------------
 	/**
-	 * Constructeur de medaille
+	 * Creer un objet MedailleArgent
 	 */
 	public MedailleArgent() {
 		super();

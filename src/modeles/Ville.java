@@ -2,6 +2,11 @@ package modeles;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author atirant
+ *
+ */
 public class Ville {
 
 	private int idVille;
