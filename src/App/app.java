@@ -13,8 +13,11 @@ public class app {
 		Athlete p = new Athlete("Portal", "Kylian");
 		Equipe e = new Equipe("test", new Pays("t"));
 		Epreuve Basket = new Epreuve ("Basket");
-		Session Basket1 = new Session (Basket, "10/06/24", "10h00", "10h30", "Demi-Final NBA");
-		Session Basket2 = new Session (Basket, "10/06/24", "11h00", "11h30", "Final NBA");
+		Session Basket1 = new Session (Basket, "06/06/24", "14", "15", "Demi-Final NBA");
+		Session Basket2 = new Session (Basket, "08/06/24", "16", "17", "Final NBA");
+		
+		Epreuve Nat = new Epreuve("Natation");
+		Session nat = new Session(Nat, "07/06/24", "15","16","Final 400M");
 		// Creation de la fenetre de l'app
 		JFrame app = new JFrame("JO_APP");
 		

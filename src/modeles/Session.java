@@ -33,7 +33,7 @@ public class Session {
 	public String getHeureFinEpreuve() {
 		return this.heureFinSession;
 	}
-	public String dateSession() {
+	public String getDateSession() {
 		return this.dateSession;
 	}
 	public String getNomSession() {
