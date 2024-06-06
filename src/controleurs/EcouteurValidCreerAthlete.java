@@ -10,10 +10,14 @@ import App.app;
  *  @author Antonin
  */
 public class EcouteurValidCreerAthlete implements ActionListener {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	EcouteurBtnCreerAthlete data;
 	AjoutAthlete page;
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurValidCreerAthlete(EcouteurBtnCreerAthlete data, AjoutAthlete page) {
 		this.data = data;
 		this.page = page;

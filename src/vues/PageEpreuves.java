@@ -15,7 +15,9 @@ import modeles.*;
  */
 public class PageEpreuves extends JPanel{
 	
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	public JPanel main = new JPanel();
 	
 	JPanel buttons = new JPanel();
@@ -34,7 +36,9 @@ public class PageEpreuves extends JPanel{
 	
 	
 	public JList<String> listeEpreuve = new JList<String>();
-		
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public PageEpreuves() {
 		
 			EcouteurBtnCreerEpreuve clickCreationEpreuve = new EcouteurBtnCreerEpreuve(this);
@@ -62,6 +66,10 @@ public class PageEpreuves extends JPanel{
 			
 			
 		}
+	//--------------------------
+	// METHODES
+	//--------------------------
+
 	public void refreshListe() {
 		main.remove(listeEpreuve);
 		String[] tabEpreuve = new String[(Epreuve.lesEpreuves).size()];

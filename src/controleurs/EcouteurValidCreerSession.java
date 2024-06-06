@@ -10,11 +10,15 @@ import App.app;
  *  @author Antonin
  */
 public class EcouteurValidCreerSession implements ActionListener {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	EcouteurBtnCreerSession data;
 	PageEpreuves page;
 	int index;
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurValidCreerSession(EcouteurBtnCreerSession data, PageEpreuves page, int index) {
 		this.data = data;
 		this.page = page;

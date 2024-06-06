@@ -13,7 +13,9 @@ import vues.*;
  *  @author Antonin
  */
 public class EcouteurBtnCreerSession implements ActionListener {
-
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	JButton valider;
 	PageEpreuves page;
 	JLabel nomSession;
@@ -26,7 +28,9 @@ public class EcouteurBtnCreerSession implements ActionListener {
 	JTextField InputHeureFinSession;
 	JPanel container = new JPanel();
 	int index;
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurBtnCreerSession(PageEpreuves page, int index) {
 		this.index = index;
 		this.page = page;

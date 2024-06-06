@@ -8,10 +8,14 @@ import vues.*;
  *  @author Antonin
  */
 public class EcouteurBtnEquipe implements ActionListener {
-
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	Accueil old;
 	PageEquipes pEquipe = new PageEquipes();
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurBtnEquipe(Accueil old) {
 		this.old = old;
 	}

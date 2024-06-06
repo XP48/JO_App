@@ -12,7 +12,9 @@ import vues.*;
  *  @author Antonin
  */
 public class EcouteurBtnCreerEquipe implements ActionListener {
-
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	JButton valider;
 	PageEquipes page;
 	JLabel titre;
@@ -20,7 +22,9 @@ public class EcouteurBtnCreerEquipe implements ActionListener {
 	JTextField InputNom;
 	JTextField InputPays;
 	JPanel container = new JPanel();
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurBtnCreerEquipe(PageEquipes page) {
 		this.page = page;
 		this.valider = new JButton("Valider");

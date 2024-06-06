@@ -11,13 +11,17 @@ import modeles.*;
  */
 
 public class Planning extends JPanel {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	JTable Planning;
 	private int hauteur = 20;
 	private int longeur = 12;
 	
 	public JPanel main = new JPanel();	
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public Planning() {
 		
 		main.setLayout(new BorderLayout());
@@ -27,7 +31,10 @@ public class Planning extends JPanel {
 		main.add(Planning, BorderLayout.CENTER);
 		
 	}
-	
+	//--------------------------
+	// METHODES
+	//--------------------------
+
 	public void rempliTableau() 
 	{
 		

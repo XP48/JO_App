@@ -13,12 +13,17 @@ import vues.*;
  */
 public class EcouteurBtnAjoutAthleteToEquipe implements ActionListener {
 	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	JList<String> list;
 	AjoutAthlete page;
 	int indiceEquipe;
 	JFrame app;
 	EcouteurJListeEquipe ec;
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurBtnAjoutAthleteToEquipe(JList<String> list, AjoutAthlete page, int indice, JFrame app, EcouteurJListeEquipe ec) {
 		this.list = list;
 		this.page = page;

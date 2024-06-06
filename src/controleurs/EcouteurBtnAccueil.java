@@ -8,9 +8,16 @@ import vues.*;
  */
 public class EcouteurBtnAccueil implements ActionListener {
 
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
+	
 	Accueil old;
 	Planning plan = new Planning();
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
+
 	public EcouteurBtnAccueil(Accueil old) {
 		this.old = old;
 	}

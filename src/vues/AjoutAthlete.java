@@ -12,7 +12,10 @@ import modeles.*;
  *  @author Antonin
  */
 public class AjoutAthlete {
-	
+
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 public JPanel main = new JPanel();
 	
 	JPanel buttons = new JPanel();
@@ -33,7 +36,9 @@ public JPanel main = new JPanel();
 	JFrame app;
 	
 	EcouteurJListeEquipe e;
-		
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------	
 	public AjoutAthlete(int indice, JFrame app, EcouteurJListeEquipe e) {
 			
 			this.e = e;
@@ -62,6 +67,10 @@ public JPanel main = new JPanel();
 			
 			
 		}
+	//--------------------------
+	// METHODES
+	//--------------------------
+
 	public void refreshListe() {
 		main.remove(listeAthlete);
 		String[] tabAthletes = new String[(Athlete.lesAthletes).size()];

@@ -14,9 +14,13 @@ import App.app;
  *  @author Antonin
  */
 public class EcouteurJListeAthlete implements ListSelectionListener {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	AjoutAthlete page;
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurJListeAthlete(AjoutAthlete page) {
 		this.page = page;
 	}

@@ -14,7 +14,9 @@ import modeles.*;
  *  @author Antonin
  */
 public class PageEquipes extends JPanel{
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	
 	public JPanel main = new JPanel();
 	
@@ -30,7 +32,9 @@ public class PageEquipes extends JPanel{
 	
 	
 	JList<String> listeEquipe = new JList<String>();
-		
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public PageEquipes() {
 		
 			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(this);
@@ -56,6 +60,10 @@ public class PageEquipes extends JPanel{
 			
 			
 		}
+	//--------------------------
+	// METHODES
+	//--------------------------
+
 	public void refreshListe() {
 		main.remove(listeEquipe);
 		String[] tabEquipes = new String[(Equipe.lesEquipes).size()];

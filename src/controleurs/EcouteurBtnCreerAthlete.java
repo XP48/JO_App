@@ -11,7 +11,9 @@ import vues.*;
  *  @author Antonin
  */
 public class EcouteurBtnCreerAthlete implements ActionListener {
-
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	JButton valider;
 	AjoutAthlete page;
 	JLabel titre;
@@ -19,7 +21,9 @@ public class EcouteurBtnCreerAthlete implements ActionListener {
 	JTextField InputNom;
 	JTextField InputPrenom;
 	JPanel container = new JPanel();
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurBtnCreerAthlete(AjoutAthlete page) {
 		this.page = page;
 		this.valider = new JButton("Valider");

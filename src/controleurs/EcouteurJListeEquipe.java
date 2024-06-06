@@ -16,7 +16,9 @@ import App.app;
  *  @author Antonin
  */
 public class EcouteurJListeEquipe implements ListSelectionListener {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	PageEquipes page;
 	JList<String> listeEquipe;
 	String listeAthlete = "";
@@ -24,7 +26,9 @@ public class EcouteurJListeEquipe implements ListSelectionListener {
 	JTextArea athletes = new JTextArea("");
 	JTextArea nom = new JTextArea("");
 	JTextArea pays = new JTextArea("");
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurJListeEquipe(JList<String> listeEquipe, PageEquipes page) {
 		this.page = page;
 		this.listeEquipe = listeEquipe;

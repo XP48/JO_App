@@ -19,7 +19,9 @@ import App.app;
  *  @author Antonin
  */
 public class EcouteurJListeSession implements ListSelectionListener {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	PageEpreuves page;
 	JList<String> liste;
 	JPanel infos = new JPanel();
@@ -27,7 +29,9 @@ public class EcouteurJListeSession implements ListSelectionListener {
 	JLabel date = new JLabel("");
 	JLabel heureDeb = new JLabel("");
 	JLabel heureFin = new JLabel("");
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public EcouteurJListeSession(JList<String> liste, PageEpreuves page) {
 		this.page = page;
 		this.liste = liste;

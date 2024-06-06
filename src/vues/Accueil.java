@@ -10,7 +10,9 @@ import controleurs.*;
  */
 
 public class Accueil extends JPanel {
-	
+	//--------------------------
+	// ATTRIBUTS
+	//--------------------------
 	JButton Equipes;
 	JButton Epreuves;
 	JButton Accueil;
@@ -20,7 +22,9 @@ public class Accueil extends JPanel {
 	
 	public JPanel top = new JPanel();
 	
-	
+	//--------------------------
+	// CONSTRUCTEUR
+	//--------------------------
 	public Accueil() {
 			
 		EcouteurBtnEquipe clickEquipe = new EcouteurBtnEquipe(this);
@@ -53,7 +57,10 @@ public class Accueil extends JPanel {
 		main.add(top, BorderLayout.NORTH);
 		
 	}
-	
+	//--------------------------
+	// METHODES
+	//--------------------------
+
 	/**
 	 * Méthode permettant de changer la fenetre afficher
 	 * @param vue
