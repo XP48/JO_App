@@ -13,6 +13,12 @@ import vues.*;
 import modeles.*;
 import App.app;
 
+/**
+ * Classe EcouteurJListeEpreuve
+ * @author aksanti
+ *
+ */
+
 public class EcouteurJListeEpreuve implements ListSelectionListener {
 	
 	JButton btn;
