@@ -29,10 +29,12 @@ public class Athlete {
 	 * @param prenomAthlete String pour definir le prenom de l'athlete
 	 */
 	public Athlete(String nomAthlete, String prenomAthlete) {
-		this.nomAthlete=nomAthlete;
-		this.prenomAthlete=prenomAthlete;
-		idAthlete=nbAthlete++;
-		lesAthletes.add(this);
+		if(!nomAthlete.isEmpty() && !prenomAthlete.isEmpty()) {
+			this.nomAthlete=nomAthlete;
+			this.prenomAthlete=prenomAthlete;
+			idAthlete=nbAthlete++;
+			lesAthletes.add(this);
+		}
 	}
 	
 	//--------------------------

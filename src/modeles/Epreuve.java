@@ -37,9 +37,11 @@ public class Epreuve implements Serializable{
 	 * @param nomEpreuve
 	 */
 	public Epreuve(String nomEpreuve) {
-		this.idEpreuve=nbEpreuve++;
-		this.nomEpreuve=nomEpreuve;
-		lesEpreuves.add(this);
+		if(!nomEpreuve.isEmpty()) {
+			this.idEpreuve=nbEpreuve++;
+			this.nomEpreuve=nomEpreuve;
+			lesEpreuves.add(this);
+		}
 	}	
 	
 	//--------------------------

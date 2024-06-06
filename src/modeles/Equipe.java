@@ -30,11 +30,9 @@ public class Equipe {
 	 * @param p pays a laquel appartient l'equipe
 	 */
 	public Equipe(String nomEquipe,Pays p) {
-		if(!nomEquipe.isEmpty()) {			
-			System.out.println(nomEquipe);
+		if(!nomEquipe.isEmpty()) {
 			this.nomEquipe=nomEquipe; 
 			lesEquipes.add(this); 
-			System.out.println(lesEquipes.size());
 			SonPays = p;
 			p.ajouteEquipeP(this);
 			idEquipe=nbEquipe++;
