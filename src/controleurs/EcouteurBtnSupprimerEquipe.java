@@ -7,7 +7,9 @@ import javax.swing.*;
 import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
-
+/**
+ *  @author Antonin
+ */
 public class EcouteurBtnSupprimerEquipe implements ActionListener {
 	
 	JList<String> list;

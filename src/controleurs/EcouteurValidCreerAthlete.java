@@ -6,7 +6,9 @@ import javax.swing.*;
 import vues.*;
 import modeles.*;
 import App.app;
-
+/**
+ *  @author Antonin
+ */
 public class EcouteurValidCreerAthlete implements ActionListener {
 	
 	EcouteurBtnCreerAthlete data;

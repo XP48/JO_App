@@ -9,7 +9,9 @@ import modeles.Epreuve;
 import modeles.Session;
 import vues.*;
 
-
+/**
+ *  @author Antonin
+ */
 public class EcouteurBtnCreerSession implements ActionListener {
 
 	JButton valider;

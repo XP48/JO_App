@@ -7,7 +7,9 @@ import javax.swing.*;
 import modeles.Athlete;
 import modeles.Pays;
 import vues.*;
-
+/**
+ *  @author Antonin
+ */
 public class EcouteurBtnCreerAthlete implements ActionListener {
 
 	JButton valider;

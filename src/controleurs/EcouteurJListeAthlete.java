@@ -10,7 +10,9 @@ import javax.swing.event.ListSelectionListener;
 import vues.*;
 import modeles.*;
 import App.app;
-
+/**
+ *  @author Antonin
+ */
 public class EcouteurJListeAthlete implements ListSelectionListener {
 	
 	AjoutAthlete page;

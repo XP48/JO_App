@@ -8,7 +8,9 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import controleurs.*;
 import modeles.*;
-
+/**
+ *  @author Antonin
+ */
 public class AjoutAthlete {
 	
 public JPanel main = new JPanel();

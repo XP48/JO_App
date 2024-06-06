@@ -8,6 +8,9 @@ import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
 
+/**
+ *  @author Antonin
+ */
 public class EcouteurBtnAjoutAthlete implements ActionListener {
 	
 	JList<String> list;

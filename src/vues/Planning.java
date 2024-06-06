@@ -6,7 +6,9 @@ import java.awt.event.ActionListener;
 import controleurs.*;
 import modeles.*;
 
-
+/**
+ *  @author Iliann
+ */
 
 public class Planning extends JPanel {
 	

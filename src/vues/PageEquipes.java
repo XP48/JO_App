@@ -10,7 +10,9 @@ import java.util.ArrayList;
 
 import controleurs.*;
 import modeles.*;
-
+/**
+ *  @author Antonin
+ */
 public class PageEquipes extends JPanel{
 	
 	

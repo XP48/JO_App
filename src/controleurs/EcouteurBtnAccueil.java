@@ -3,6 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import vues.*;
 
+/**
+ *  @author Antonin
+ */
 public class EcouteurBtnAccueil implements ActionListener {
 
 	Accueil old;
