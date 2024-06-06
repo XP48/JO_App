@@ -11,7 +11,7 @@ import modeles.*;
 public class Planning extends JPanel {
 	
 	JTable Planning;
-	private int hauteur = 8;
+	private int hauteur = 20;
 	private int longeur = 12;
 	
 	public JPanel main = new JPanel();	
