@@ -1,5 +1,6 @@
 package controleurs;
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -40,6 +41,13 @@ public class EcouteurBtnCreerSession implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
+		
+		BorderLayout layout = (BorderLayout) page.main.getLayout();
+        Component southComponent = layout.getLayoutComponent(BorderLayout.SOUTH);
+        if(southComponent != null) {
+        	page.main.remove(southComponent);
+        }
+		
 		creerSession(page.main);
 		page.main.updateUI();
 	}

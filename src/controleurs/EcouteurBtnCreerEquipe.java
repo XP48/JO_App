@@ -1,5 +1,6 @@
 package controleurs;
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -34,7 +35,12 @@ public class EcouteurBtnCreerEquipe implements ActionListener {
 	
 	private void creerEquipe(JPanel input) {
 		
-		container.removeAll();
+		BorderLayout layout = (BorderLayout) page.main.getLayout();
+        Component southComponent = layout.getLayoutComponent(BorderLayout.SOUTH);
+        if(southComponent != null) {
+        	page.main.remove(southComponent);
+        }
+		
 		EcouteurValidCreerEquipe clickValid = new EcouteurValidCreerEquipe(this, page);
 		valider.addActionListener(clickValid);
 		

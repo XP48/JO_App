@@ -26,15 +26,19 @@ public class Equipe {
 	/**
 	 * constructeur d'equipe qui prend en parametre le nom de l'equipe et un objet pays 
 	 * 
-	 * @param nomEquipe nom de l'equipe qui va etre creer
+	 * @param nomEquipe nom de l'equipe qui va etre creer NOT NULL
 	 * @param p pays a laquel appartient l'equipe
 	 */
 	public Equipe(String nomEquipe,Pays p) {
-		this.nomEquipe=nomEquipe; 
-		lesEquipes.add(this); 
-		SonPays = p;
-		p.ajouteEquipeP(this);
-		idEquipe=nbEquipe++;
+		if(!nomEquipe.isEmpty()) {			
+			System.out.println(nomEquipe);
+			this.nomEquipe=nomEquipe; 
+			lesEquipes.add(this); 
+			System.out.println(lesEquipes.size());
+			SonPays = p;
+			p.ajouteEquipeP(this);
+			idEquipe=nbEquipe++;
+		}
 	}
 	
 	

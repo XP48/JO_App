@@ -32,8 +32,6 @@ public class EcouteurJListeSession implements ListSelectionListener {
 		this.liste = liste;
 	}
 	public void valueChanged(ListSelectionEvent e) {
-		//(((JList<String>)(e.getSource())).getSelectedValuesList())
-		//btn.setEnabled(true);;
 		Epreuve epreuve = Epreuve.lesEpreuves.get(page.listeEpreuve.getSelectedIndex());
 		Session elem = epreuve.sesSession.get(liste.getSelectedIndex());
 
