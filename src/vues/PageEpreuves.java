@@ -31,7 +31,7 @@ public class PageEpreuves extends JPanel{
 	public JLabel titreSession = new JLabel("Nom des sessions");
 	
 	
-	JList<String> listeEpreuve = new JList<String>();
+	public JList<String> listeEpreuve = new JList<String>();
 		
 	public PageEpreuves() {
 		

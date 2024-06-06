@@ -1,8 +1,11 @@
-/*package controleurs;
+package controleurs;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -18,7 +21,11 @@ public class EcouteurJListeSession implements ListSelectionListener {
 	JButton btn;
 	PageEpreuves page;
 	JList<String> liste;
-	JList<String> listeSession;
+	JPanel infos = new JPanel();
+	JLabel nom = new JLabel("");
+	JLabel date = new JLabel("");
+	JLabel heureDeb = new JLabel("");
+	JLabel heureFin = new JLabel("");
 	
 	public EcouteurJListeSession(JList<String> liste, PageEpreuves page) {
 		this.page = page;
@@ -27,28 +34,31 @@ public class EcouteurJListeSession implements ListSelectionListener {
 	public void valueChanged(ListSelectionEvent e) {
 		//(((JList<String>)(e.getSource())).getSelectedValuesList())
 		//btn.setEnabled(true);;
-		Session elem = Session.lesSessions.get(liste.getSelectedIndex());
-		String[] tabSessions = new String[(elem.sesSession).size()];
-		
-		for (int i = 0; i < elem.sesSession.size(); i++) 
-        {
-			tabSessions[i] = elem.sesSession.get(i).getNomSession();
+		Epreuve epreuve = Epreuve.lesEpreuves.get(page.listeEpreuve.getSelectedIndex());
+		Session elem = epreuve.sesSession.get(liste.getSelectedIndex());
+
+		BorderLayout layout = (BorderLayout) page.main.getLayout();
+        Component westComponent = layout.getLayoutComponent(BorderLayout.WEST);
+        if(westComponent != null) {
+        	page.main.remove(westComponent);
         }
+        
 		
-		int index = liste.getSelectedIndex();
+		infos.setLayout(new GridLayout(4,1));
 		
-		EcouteurBtnCreerSession clickCreerSession = new EcouteurBtnCreerSession(page, index);
-		page.CreerSession.addActionListener(clickCreerSession);
+		nom.setText("Nom : " + elem.getNomSession());
+		date.setText("Date : " + elem.getDateSession());
+		heureDeb.setText("Heure début : " + elem.getHeureDebutEpreuve());
+		heureFin.setText("Heure fin : " + elem.getHeureFinEpreuve());
 		
-		listeSession = new JList<String>(tabSessions);
+		infos.add(nom);
+		infos.add(date);
+		infos.add(heureDeb);
+		infos.add(heureFin);
 		
-		listeSession.setFont(new Font("Arial", Font.BOLD, 14));
-		listeSession.setForeground(Color.BLUE);
-		page.CreerSession.setEnabled(true);
-		page.SupprimerEpreuve.setEnabled(true);
-		page.grid.removeAll();
-		page.grid.add(liste);
-		page.grid.add(listeSession);
-		page.main.add(page.grid, BorderLayout.CENTER);
+		
+		page.main.add(infos, BorderLayout.WEST);
 		page.main.updateUI();
-	}*/
+	}
+
+}

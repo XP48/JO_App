@@ -41,6 +41,8 @@ public class EcouteurJListeEpreuve implements ListSelectionListener {
 		page.CreerSession.addActionListener(clickCreerSession);
 		
 		listeSession = new JList<String>(tabSessions);
+		EcouteurJListeSession clickListe = new EcouteurJListeSession(listeSession, page);
+		listeSession.addListSelectionListener(clickListe);
 		
 		listeSession.setFont(new Font("Arial", Font.BOLD, 14));
 		listeSession.setForeground(Color.BLUE);
