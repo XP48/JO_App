@@ -15,18 +15,21 @@ public class EcouteurBtnAjoutAthleteToEquipe implements ActionListener {
 	AjoutAthlete page;
 	int indiceEquipe;
 	JFrame app;
+	EcouteurJListeEquipe ec;
 	
-	public EcouteurBtnAjoutAthleteToEquipe(JList<String> list, AjoutAthlete page, int indice, JFrame app) {
+	public EcouteurBtnAjoutAthleteToEquipe(JList<String> list, AjoutAthlete page, int indice, JFrame app, EcouteurJListeEquipe ec) {
 		this.list = list;
 		this.page = page;
 		this.indiceEquipe = indice;
 		this.app = app;
+		this.ec = ec;
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		int index = list.getSelectedIndex();
 		if(index <= Athlete.lesAthletes.size()) {	
 			Equipe.lesEquipes.get(indiceEquipe).ajouteAthlete(Athlete.lesAthletes.get(index));
+			ec.changerAffichage();
 			app.dispose();
 		}
 		

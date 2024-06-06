@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import modeles.Athlete;
+import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
 

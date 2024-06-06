@@ -18,7 +18,6 @@ import App.app;
 
 public class EcouteurJListeSession implements ListSelectionListener {
 	
-	JButton btn;
 	PageEpreuves page;
 	JList<String> liste;
 	JPanel infos = new JPanel();

@@ -29,9 +29,12 @@ public JPanel main = new JPanel();
 	int indiceEquipe;
 	
 	JFrame app;
+	
+	EcouteurJListeEquipe e;
 		
-	public AjoutAthlete(int indice, JFrame app) {
+	public AjoutAthlete(int indice, JFrame app, EcouteurJListeEquipe e) {
 			
+			this.e = e;
 			this.indiceEquipe = indice;
 			this.app = app;
 			AjouterAthlete = new JButton("Ajouter un athlète à l'équipe " + Equipe.lesEquipes.get(indiceEquipe).getNomEquipe());
@@ -83,7 +86,7 @@ public JPanel main = new JPanel();
 		EcouteurBtnSupprimerAthlete clickSupprAthlete = new EcouteurBtnSupprimerAthlete(listeAthlete, this);
 		SupprimerAthlete.addActionListener(clickSupprAthlete);
 		
-		EcouteurBtnAjoutAthleteToEquipe clickAjoutAthleteToEquipe = new EcouteurBtnAjoutAthleteToEquipe(listeAthlete, this, indiceEquipe, app);
+		EcouteurBtnAjoutAthleteToEquipe clickAjoutAthleteToEquipe = new EcouteurBtnAjoutAthleteToEquipe(listeAthlete, this, indiceEquipe, app, e);
 		AjouterAthlete.addActionListener(clickAjoutAthleteToEquipe);
 		
 		EcouteurJListeAthlete clickListe = new EcouteurJListeAthlete(this);

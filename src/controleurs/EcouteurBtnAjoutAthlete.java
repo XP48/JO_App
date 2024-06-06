@@ -13,11 +13,13 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 	JList<String> list;
 	PageEquipes page;
 	int indiceEquipe;
+	EcouteurJListeEquipe ec;
 	
-	public EcouteurBtnAjoutAthlete(JList<String> list, PageEquipes page, int indice) {
+	public EcouteurBtnAjoutAthlete(JList<String> list, PageEquipes page, int indice, EcouteurJListeEquipe ec) {
 		this.list = list;
 		this.page = page;
 		this.indiceEquipe = indice;
+		this.ec = ec;
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -30,7 +32,7 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 			// Taille de la fenetre
 			app.setSize(800, 200);
 			
-			AjoutAthlete acc = new AjoutAthlete(indiceEquipe, app);
+			AjoutAthlete acc = new AjoutAthlete(indiceEquipe, app, ec);
 			
 			app.add(acc.main);
 			app.pack();

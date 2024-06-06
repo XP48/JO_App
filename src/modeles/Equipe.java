@@ -13,7 +13,7 @@ public class Equipe {
 	//--------------------------
 	
 	private ArrayList<Epreuve> sesEpreuve = new ArrayList<Epreuve>();
-	private ArrayList<Athlete> sesAthlete = new ArrayList<Athlete>();
+	public ArrayList<Athlete> sesAthlete = new ArrayList<Athlete>();
 	public static ArrayList<Equipe> lesEquipes = new ArrayList<Equipe>();
 	Pays SonPays;
 	private int idEquipe;
