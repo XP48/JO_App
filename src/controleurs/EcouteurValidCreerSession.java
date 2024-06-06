@@ -21,8 +21,7 @@ public class EcouteurValidCreerSession implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		Epreuve E = Epreuve.lesEpreuves.get(index);
-		new Session(E, data.Inputsession.getText(), data.InputDateSession.getText(), data.InputHeureDebSession.getText(), data.InputHeureFinSession.getText());
-		data.InputNom.setText("");
+		new Session(E, data.InputDateSession.getText().toString(), data.InputHeureDebSession.getText(), data.InputHeureFinSession.getText(), data.Inputsession.getText());
 		data.Inputsession.setText("");
 		data.InputDateSession.setText("");
 		data.InputHeureDebSession.setText("");

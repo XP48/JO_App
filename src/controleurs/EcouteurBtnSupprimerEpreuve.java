@@ -8,6 +8,12 @@ import modeles.Epreuve;
 import modeles.Session;
 import vues.*;
 
+/**
+ * Classe EcouteurBtnSupprimerEpreuve
+ * @author aksanti
+ *
+ */
+
 public class EcouteurBtnSupprimerEpreuve implements ActionListener {
 	
 	JList<String> list;

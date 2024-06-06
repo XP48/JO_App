@@ -7,6 +7,12 @@ import vues.*;
 import modeles.*;
 import App.app;
 
+/**
+ * Classe EcouteurValidCreerEpreuve
+ * @author aksanti
+ *
+ */
+
 public class EcouteurValidCreerEpreuve implements ActionListener {
 	
 	EcouteurBtnCreerEpreuve data;

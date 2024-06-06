@@ -8,6 +8,12 @@ import vues.Accueil;
 import vues.PageEpreuves;
 import vues.PageEpreuves;
 
+/**
+ * Classe EcouteurBtnEpreuve
+ * @author aksanti
+ *
+ */
+
 public class EcouteurBtnEpreuve implements ActionListener {
 
 	PageEpreuves pEpreuve = new PageEpreuves();
