@@ -9,10 +9,7 @@ import controleurs.*;
 
 public class app {
 
-	public static void main(String[] args) {
-		Athlete p = new Athlete("Portal", "Kylian");
-		Equipe e = new Equipe("Gentle mates", new Pays("France"));
-		
+	public static void main(String[] args) {		
 		
 		// Creation de la fenetre de l'app
 		JFrame app = new JFrame("JO_APP");
