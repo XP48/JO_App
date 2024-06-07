@@ -44,21 +44,17 @@ public class Ville {
 	// ACCESSEURS
 	//--------------------------
 	
-	/**
-	 * Retourne le nom de la ville
-	 * @return
+	/** 
+	 * @return le nom de la ville
 	 */
 	public String getNomVille() {
 		return nomVille;
 	}
 	
-	/**
-	 * Retourne l'id de la ville
-	 * @return
+	/** 
+	 * @return l'id de la ville
 	 */
 	public int getIdVille() {
 		return this.idVille;
 	}
-	
-
 }

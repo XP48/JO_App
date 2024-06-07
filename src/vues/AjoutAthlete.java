@@ -1,5 +1,6 @@
 package vues;
 import javax.swing.*;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -8,15 +9,17 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import controleurs.*;
 import modeles.*;
+
 /**
- *  @author Antonin
+ * vue ajoutAthlete
+ *  @author alances
  */
 public class AjoutAthlete {
 
 	//--------------------------
 	// ATTRIBUTS
 	//--------------------------
-public JPanel main = new JPanel();
+	public JPanel main = new JPanel();
 	
 	JPanel buttons = new JPanel();
 	
@@ -55,14 +58,12 @@ public JPanel main = new JPanel();
 			AjouterAthlete.setEnabled(false);
 			
 			buttons.setLayout(new GridLayout(3, 1));
-			
 			buttons.add(CreerAthlete);
 			buttons.add(SupprimerAthlete);
 			buttons.add(AjouterAthlete);
 			//main.add(titre, BorderLayout.CENTER);
 			//main.add(listeAthlete, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune équipe
 			refreshListe();
-
 			main.add(buttons, BorderLayout.EAST);
 			
 			

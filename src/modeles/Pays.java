@@ -54,16 +54,14 @@ public class Pays {
 	// ACCESSEURS
 	//--------------------------
 	/**
-	 * Retourne l'id du pays
-	 * @return
+	 * @return l'id du pays
 	 */
 	public int getIdPays() {
 		return this.idPays;
 		
 	}
 	/**
-	 * Retourne le nom du pays
-	 * @return
+	 * @return le nom du pays
 	 */
 	public String getNomPays() {
 		return this.nomPays;

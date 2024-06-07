@@ -48,7 +48,6 @@ public class Epreuve implements Serializable{
 	// METHODES
 	//--------------------------
 	
-	
 	/**
 	 * Cette methode sert a ajouter une session a une epreuve
 	 * @param s objet session
@@ -62,8 +61,7 @@ public class Epreuve implements Serializable{
 	//--------------------------
 	
 	/**
-	 * retourne le nom de l'epreuve
-	 * @return 
+	 * @return retourne le nom de l'epreuve
 	 */
 	public  String getnomEpreuve() 
 	{
@@ -71,16 +69,14 @@ public class Epreuve implements Serializable{
 	}
 	
 	/**
-	 * retourne l'id de l'epreuve
-	 * @return 
+	 * @return l'id de l'epreuve
 	 */
 	public int getIdEpreuve() {
 		return this.idEpreuve;
 	}
 	
 	/**
-	 * retourne le nom de l'epreuve
-	 * @return
+	 * @return le nom de l'epreuve
 	 */
 	public String getNomEpreuve() {
 		return this.nomEpreuve;

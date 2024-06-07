@@ -1,5 +1,6 @@
 package modeles;
 import java.util.ArrayList;
+import java.io.*;
 
 /**
  * Classe Athlete
@@ -7,14 +8,17 @@ import java.util.ArrayList;
  *
  */
 
-public class Athlete {
+public class Athlete implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//--------------------------
 	// ATTRIBUTS
 	//--------------------------
 	private ArrayList<Equipe> sesEquipe = new ArrayList<Equipe>();
 	public static ArrayList<Athlete> lesAthletes = new ArrayList<Athlete>();
-	private Pays sonPays;
 	private int idAthlete;
 	private String nomAthlete;
 	private String prenomAthlete;
@@ -41,7 +45,7 @@ public class Athlete {
 	// METHODES
 	//--------------------------
 	/**
-	 * Cette méthode permet d'ajouter une equipe a l'athlete
+	 * Cette methode permet d'ajouter une equipe a l'athlete
 	 * @param e objet equipe
 	 */
 	public void ajouteEquipeA(Equipe e) {
@@ -54,16 +58,18 @@ public class Athlete {
 	public void removeEquipeA(Equipe e) {
 		sesEquipe.remove(e);
 	}
+<<<<<<< HEAD
 	
 	public void ajouteSonPays(Pays p) {
-		this.sonPays=sonPays;
+		this.sonPays=p;
 	}
+=======
+>>>>>>> 926b6787300488ae9afab3d05d6267f428cf3a1e
 	//--------------------------
 	// ACCESSEURS
 	//--------------------------
 	/**
-	 * retourne l'id de l'athlete
-	 * @return
+	 * @return l'id de l'athlete
 	 */
 	
 	public int getIdAthlete() {
@@ -71,17 +77,19 @@ public class Athlete {
 	}
 	
 	/**
-	 * retourne le nom de l'athlete
-	 * @return
+	 * @return le nom de l'athlete
 	 */
 	public String getNomAthlete() {
 		return this.nomAthlete;
 	}
-	/**
-	 * retourne le prenom de l'athlete
-	 * @return
+	/** 
+	 * @return le prenom de l'athlete
 	 */
 	public String getPrenomAthlete() {
 		return this.prenomAthlete;
-	}
+	}	
+	
+
+	
+	
 }

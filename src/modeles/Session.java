@@ -40,32 +40,28 @@ public class Session {
 	// ACCESSEURS
 	//--------------------------
 	/**
-	 * Retourne l'heure de debut de l'epreuve
-	 * @return
+	 * @return l'heure de debut de l'epreuve
 	 */
 	public String getHeureDebutEpreuve() {
 		return this.heureDebutSession;
 	}
 	
 	/**
-	 * Retourne l'heure de fin de l'epreuve
-	 * @return
+	 * @return l'heure de fin de l'epreuve
 	 */
 	public String getHeureFinEpreuve() {
 		return this.heureFinSession;
 	}
 	
 	/**
-	 * Retourne la date de la session
-	 * @return
+	 * @return la date de la session
 	 */
 	public String getDateSession() {
 		return this.dateSession;
 	}
 	
-	/**
-	 * Retourn le nom de la session
-	 * @return
+	/** 
+	 * @returnle nom de la session
 	 */
 	public String getNomSession() {
 		return nomSession;
