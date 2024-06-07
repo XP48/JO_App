@@ -16,7 +16,7 @@ public class Planning extends JPanel {
 	//--------------------------
 	JTable Planning;
 	private int hauteur = 18;
-	private int longeur = 12;
+	private int longeur = 23;
 	
 	
 	public JPanel main = new JPanel();	
@@ -60,17 +60,29 @@ public class Planning extends JPanel {
 		Planning.setValueAt("10/08/24", 16, 0);
 		Planning.setValueAt("11/08/24", 17, 0);
 		
+		
 		Planning.setValueAt("9h00", 0, 1);
-		Planning.setValueAt("10h00", 0, 2);
-		Planning.setValueAt("11h00", 0, 3);
-		Planning.setValueAt("12h00", 0, 4);
-		Planning.setValueAt("13h00", 0, 5);
-		Planning.setValueAt("14h00", 0, 6);
-		Planning.setValueAt("15h00", 0, 7);
-		Planning.setValueAt("16h00", 0, 8);
-		Planning.setValueAt("17h00", 0, 9);
-		Planning.setValueAt("18h00", 0, 10);
-		Planning.setValueAt("19h00", 0, 11);
+		Planning.setValueAt("9h30", 0, 2);
+		Planning.setValueAt("10h00", 0, 3);
+		Planning.setValueAt("10h30", 0, 4);
+		Planning.setValueAt("11h00", 0, 5);
+		Planning.setValueAt("11h30", 0, 6);
+		Planning.setValueAt("12h00", 0, 7);
+		Planning.setValueAt("12h30", 0, 8);
+		Planning.setValueAt("13h00", 0, 9);
+		Planning.setValueAt("13h30", 0, 10);
+		Planning.setValueAt("14h00", 0, 11);
+		Planning.setValueAt("14h30", 0, 12);
+		Planning.setValueAt("15h00", 0, 13);
+		Planning.setValueAt("15h30", 0, 14);
+		Planning.setValueAt("16h00", 0, 15);
+		Planning.setValueAt("16h30", 0, 16);
+		Planning.setValueAt("17h00", 0, 17);
+		Planning.setValueAt("17h30", 0, 18);
+		Planning.setValueAt("18h00", 0, 19);
+		Planning.setValueAt("18h30", 0, 20);
+		Planning.setValueAt("19h00", 0, 21);
+		Planning.setValueAt("19h30", 0, 22);
 		
 		
         for (int i = 0; i < Epreuve.lesEpreuves.size(); i++) 
@@ -88,7 +100,8 @@ public class Planning extends JPanel {
 						while (test != Integer.parseInt(elem.getHeureFinEpreuve()))
 						{
 							
-							Planning.setValueAt(elem.getNomSession(), k, test-8);
+							Planning.setValueAt(elem.getNomSession(), k, (2*test-16));
+							Planning.setValueAt(elem.getNomSession(), k, (2*test-17));
 							test++;
 						}
 					}

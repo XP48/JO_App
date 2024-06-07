@@ -4,9 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import controleurs.*;
+
 /**
- * Vue Accueil
- *  @author alances
+ *  @author Antonin
  */
 
 public class Accueil extends JPanel {
@@ -25,11 +25,7 @@ public class Accueil extends JPanel {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
-	/**
-	 * Constructeur pour la page d'acceuil
-	 */
 	public Accueil() {
-			
 		EcouteurBtnEquipe clickEquipe = new EcouteurBtnEquipe(this);
 		
 		EcouteurBtnAccueil clickPlanning = new EcouteurBtnAccueil(this);
