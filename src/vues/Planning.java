@@ -15,8 +15,9 @@ public class Planning extends JPanel {
 	// ATTRIBUTS
 	//--------------------------
 	JTable Planning;
-	private int hauteur = 20;
+	private int hauteur = 18;
 	private int longeur = 12;
+	
 	
 	public JPanel main = new JPanel();	
 	//--------------------------
@@ -35,17 +36,29 @@ public class Planning extends JPanel {
 	// METHODES
 	//--------------------------
 
+
+	
 	public void rempliTableau() 
 	{
 		
 		Planning.setValueAt("JOURS/HEURES", 0, 0);
-		Planning.setValueAt("03/06/24", 1, 0);
-		Planning.setValueAt("04/06/24", 2, 0);
-		Planning.setValueAt("05/06/24", 3, 0);
-		Planning.setValueAt("06/06/24", 4, 0);
-		Planning.setValueAt("07/06/24", 5, 0);
-		Planning.setValueAt("08/06/24", 6, 0);
-		Planning.setValueAt("09/06/24", 7, 0);
+		Planning.setValueAt("26/07/24", 1, 0);
+		Planning.setValueAt("27/07/24", 2, 0);
+		Planning.setValueAt("28/07/24", 3, 0);
+		Planning.setValueAt("29/07/24", 4, 0);
+		Planning.setValueAt("30/07/24", 5, 0);
+		Planning.setValueAt("31/07/24", 6, 0);
+		Planning.setValueAt("01/08/24", 7, 0);
+		Planning.setValueAt("02/08/24", 8, 0);
+		Planning.setValueAt("03/08/24", 9, 0);
+		Planning.setValueAt("04/08/24", 10, 0);
+		Planning.setValueAt("05/08/24", 11, 0);
+		Planning.setValueAt("06/08/24", 12, 0);
+		Planning.setValueAt("07/08/24", 13, 0);
+		Planning.setValueAt("08/08/24", 14, 0);
+		Planning.setValueAt("09/08/24", 15, 0);
+		Planning.setValueAt("10/08/24", 16, 0);
+		Planning.setValueAt("11/08/24", 17, 0);
 		
 		Planning.setValueAt("9h00", 0, 1);
 		Planning.setValueAt("10h00", 0, 2);
@@ -67,41 +80,20 @@ public class Planning extends JPanel {
         		Session elem = Epreuve.lesEpreuves.get(i).sesSession.get(j);
         		for (int k = 1; k < hauteur; k++) 
 				{
-        			System.out.println(elem.getDateSession());
-        			System.out.println(Planning.getValueAt(k, 0));
-					if (Planning.getValueAt(k, 0) == elem.getDateSession())
+					if (elem.getDateSession().equals(Planning.getValueAt(k, 0)))
 					{
-						System.out.println(elem.getNomSession());
-						Planning.setValueAt(elem.getNomSession(), k, Integer.parseInt(elem.getHeureDebutEpreuve())-8);
+						
+						int test = Integer.parseInt(elem.getHeureDebutEpreuve());
+						
+						while (test != Integer.parseInt(elem.getHeureFinEpreuve()))
+						{
+							
+							Planning.setValueAt(elem.getNomSession(), k, test-8);
+							test++;
+						}
 					}
-
-				}
-        		
-        		
-        		/*for (int k = 1; k < longeur; k++) 
-        		{
-        			System.out.println(Planning.getValueAt(0, k));
-        			if (Planning.getValueAt(0, k)== Epreuve.lesEpreuves.get(i).sesSession.get(j).getHeureDebutEpreuve()) 
-        			{
-        				
-        				System.out.println(k);
-        				for (int l = 1; l < hauteur; l++) 
-        				{
-        					System.out.println(Planning.getValueAt(l, 0));
-        					if (Planning.getValueAt(l, 0) == Epreuve.lesEpreuves.get(i).sesSession.get(j).getDateSession())
-        					{
-        						System.out.println(l);
-        						Planning.setValueAt(Epreuve.lesEpreuves.get(i).sesSession.get(j).getNomSession(), k, l);
-        					}
-        					System.out.println("..");
-        				}
-        				System.out.println(".");
-        			}
-        		}    */
+				}  
             }
-        	
-        	
-        	
         } 
 	}
 }

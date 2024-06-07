@@ -40,7 +40,7 @@ public class EcouteurBtnCreerSession implements ActionListener {
 		this.HeureDebSession  = new JLabel("Heure de debut :");
 		this.HeureFinSession  = new JLabel("Heure de fin :");
 		this.Inputsession = new JTextField(20);
-		this.InputDateSession = new JTextField(20);
+		this.InputDateSession = new JTextField(8);
 		this.InputHeureDebSession = new JTextField(20);
 		this.InputHeureFinSession = new JTextField(20);
 	}
