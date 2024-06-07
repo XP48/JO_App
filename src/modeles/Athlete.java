@@ -58,13 +58,6 @@ public class Athlete implements Serializable {
 	public void removeEquipeA(Equipe e) {
 		sesEquipe.remove(e);
 	}
-<<<<<<< HEAD
-	
-	public void ajouteSonPays(Pays p) {
-		this.sonPays=p;
-	}
-=======
->>>>>>> 926b6787300488ae9afab3d05d6267f428cf3a1e
 	//--------------------------
 	// ACCESSEURS
 	//--------------------------
