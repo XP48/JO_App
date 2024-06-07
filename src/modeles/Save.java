@@ -78,7 +78,7 @@ public class Save implements Serializable {
 		
 		for(int i=0; i < Athlete.lesAthletes.size(); i++) {
 			sauvegarde.lesAthletes.add(Athlete.lesAthletes.get(i));
-			System.out.println(sauvegarde.lesAthletes.get(i).getNomAthlete());
+			System.out.println(sauvegarde.lesAthletes.get(i).getNomAthlete() + "here");
 		}
 		for(int i=0; i < Epreuve.lesEpreuves.size(); i++) {
 			sauvegarde.lesEpreuves.add(Epreuve.lesEpreuves.get(i));
