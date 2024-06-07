@@ -21,6 +21,7 @@ public class app {
 		// Creation de la fenetre de l'app
 		JFrame app = new JFrame("JO_APP");
 		
+		
 		// Taille de la fenetre
 		app.setSize(1920, 1080);
 		
@@ -29,6 +30,7 @@ public class app {
 		
 		Accueil acc = new Accueil();
 		
+		app.addWindowListener(new Serilization());
 		app.add(acc.main);
 		app.setVisible(true);
 		

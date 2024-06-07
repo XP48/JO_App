@@ -1,5 +1,6 @@
 package modeles;
 import java.util.ArrayList;
+import java.io.*;
 
 /**
  * Classe Athlete
@@ -7,8 +8,12 @@ import java.util.ArrayList;
  *
  */
 
-public class Athlete {
+public class Athlete implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//--------------------------
 	// ATTRIBUTS
 	//--------------------------
@@ -56,7 +61,7 @@ public class Athlete {
 	}
 	
 	public void ajouteSonPays(Pays p) {
-		this.sonPays=sonPays;
+		this.sonPays=p;
 	}
 	//--------------------------
 	// ACCESSEURS
@@ -83,5 +88,9 @@ public class Athlete {
 	 */
 	public String getPrenomAthlete() {
 		return this.prenomAthlete;
-	}
+	}	
+	
+
+	
+	
 }
