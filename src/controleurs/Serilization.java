@@ -6,13 +6,12 @@ import java.io.*;
 import modeles.*;
 
 public class Serilization implements WindowListener {
-
-	Save sauv = new Save();
 	
 	@Override
 	public void windowOpened(WindowEvent e) {
 		// TODO Auto-generated method stub
 		try {
+			Save sauv = new Save();
 			sauv.charger();
 		} catch (ClassNotFoundException | IOException e1) {
 			// TODO Auto-generated catch block
@@ -24,6 +23,7 @@ public class Serilization implements WindowListener {
 	public void windowClosing(WindowEvent e) {
 		// TODO Auto-generated method stub		
 		try {
+			Save sauv = new Save();
 			sauv.sauver();
 		} catch (ClassNotFoundException | IOException e1) {
 			// TODO Auto-generated catch block
