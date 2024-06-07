@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import controleurs.*;
 import modeles.*;
 /**
- *  @author Antonin
+ * Vue PageEquipe
+ *  @author alances
  */
 public class PageEquipes extends JPanel{
 	//--------------------------
@@ -35,6 +36,10 @@ public class PageEquipes extends JPanel{
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Constructeur de la pageEquipe
+	 */
 	public PageEquipes() {
 		
 			EcouteurBtnCreerEquipe clickCreationEquipe = new EcouteurBtnCreerEquipe(this);
@@ -63,7 +68,10 @@ public class PageEquipes extends JPanel{
 	//--------------------------
 	// METHODES
 	//--------------------------
-
+	
+	/**
+	 * Methode pour rafraichir la liste des equipes
+	 */
 	public void refreshListe() {
 		main.remove(listeEquipe);
 		String[] tabEquipes = new String[(Equipe.lesEquipes).size()];

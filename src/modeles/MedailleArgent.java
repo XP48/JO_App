@@ -29,7 +29,7 @@ public class MedailleArgent extends Medaille {
 	// ACCESSEURS
 	//--------------------------
 	
-
+	
 	public int getIdMedaille() {
 		return super.idMedaille;
 	}

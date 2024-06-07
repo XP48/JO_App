@@ -2,7 +2,6 @@ package modeles;
 /**
  * Classe abstraite medaille
  * @author atirant
- *
  */
 
 public abstract class Medaille {
@@ -29,8 +28,7 @@ public abstract class Medaille {
 	// ACCESSEURS
 	//--------------------------
 	/**
-	 * Retourne l'id de la medaille
-	 * @return
+	 * @return l'id de la medaille
 	 */
 	public abstract int getIdMedaille();
 	/**

@@ -10,8 +10,10 @@ import java.util.ArrayList;
 
 import controleurs.*;
 import modeles.*;
+
 /**
- *  @author Antonin
+ * Vue PageEpreuve
+ *  @author aksanti
  */
 public class PageEpreuves extends JPanel{
 	
@@ -39,6 +41,10 @@ public class PageEpreuves extends JPanel{
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Constructeur de la page epreuve
+	 */
 	public PageEpreuves() {
 		
 			EcouteurBtnCreerEpreuve clickCreationEpreuve = new EcouteurBtnCreerEpreuve(this);
@@ -69,7 +75,11 @@ public class PageEpreuves extends JPanel{
 	//--------------------------
 	// METHODES
 	//--------------------------
-
+	
+	/**
+	 *Cette methode sert a rafraichir la liste des epreuves
+	 * 
+	 */
 	public void refreshListe() {
 		main.remove(listeEpreuve);
 		String[] tabEpreuve = new String[(Epreuve.lesEpreuves).size()];

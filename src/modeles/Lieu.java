@@ -30,22 +30,19 @@ public class Lieu {
 	// ACCESSEURS
 	//--------------------------
 	/**
-	 * Retourne l'id du lieu
-	 * @return
+	 * @return l'id du lieu
 	 */
 	public int getIdLieu() {
 		return this.idLieu;
 	}
-	/**
-	 * Retourne le nom du lieu
-	 * @return
+	/** 
+	 * @return le nom du lieu
 	 */
 	public String getNomLieu() {
 		return nomLieu;
 	}
-	/**
-	 * Retourne le nombre de place d'un lieu
-	 * @return
+	/** 
+	 * @return le nombre de place du lieu
 	 */
 	public int getNbPlacesLieu() {
 		return nbPlacesLieu;
