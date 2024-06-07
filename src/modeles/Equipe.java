@@ -66,7 +66,7 @@ public class Equipe {
 		sesAthlete.remove(athlete);
 	}
 	/**
-	 * Cette methode permet de supprimer une equipe
+	 * Cette méthode permet de supprimer une équipe au pays et aux athlètes à laquel elle est associé.
 	 */
 	public void retireEquipe() {
 		lesEquipes.remove(this);
@@ -84,16 +84,14 @@ public class Equipe {
 	//--------------------------
 	
 	/**
-	 * retourne le pays de l'equipe
-	 * @return
+	 * @return le pays de l'equipe
 	 */
 	public Pays getSonPays() {
 		return SonPays;
 	}
 	
 	/**
-	 * retourne le nom de l'equipe
-	 * @return
+	 * @return le nom de l'equipe
 	 */
 	public String getNomEquipe() {
 		return nomEquipe;
