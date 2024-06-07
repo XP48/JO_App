@@ -30,9 +30,24 @@ public class Save implements Serializable {
 
 			// Créer des objets
 			System.out.println ("Creation de quelques films et ajout dans un objet favoris");
-			/* Creer des epreuves des equipes et des athletes propres (3) */
-			Epreuve t = new Epreuve("Break-Dance");
-			Athlete test = new Athlete("Usain", "Bold");
+			/* Creer des epreuves des equipes et des athletes propres */
+			Pays France = new Pays("France");
+			Epreuve Bd = new Epreuve("Break-Dance");
+			Athlete Bolt = new Athlete("Usain", "Bolt");
+			Equipe nat = new Equipe("Natation", France);
+			Pays USA = new Pays("USA");
+			Pays Japon = new Pays("Japon");
+
+			Epreuve centm = new Epreuve("100m");
+			Epreuve deuxm = new Epreuve("200m");
+			Epreuve natation = new Epreuve("Natation");
+
+			Athlete Phelps = new Athlete("Michael", "Phelps");
+			Athlete Gatlin = new Athlete("Justin", "Gatlin");
+
+			Equipe athleUSA = new Equipe("Athlétisme USA", USA);
+			Equipe natationUSA = new Equipe("Natation USA", USA);
+			Equipe athleFrance = new Equipe("Athlétisme France", France);
 
 			// Serialiser l'objet save : on le transforme en une SERIE d'octets qu'on écrit sur disque
 			System.out.println ("Enregistrement de l'objet favoris sur disque");
