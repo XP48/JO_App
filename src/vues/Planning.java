@@ -92,19 +92,18 @@ public class Planning extends JPanel {
         		Session elem = Epreuve.lesEpreuves.get(i).sesSession.get(j);
         		for (int k = 1; k < hauteur; k++) 
 				{
-					if (elem.getDateSession().equals(Planning.getValueAt(k, 0)))
-					{
-						
-						int test = Integer.parseInt(elem.getHeureDebutEpreuve());
-						
-						while (test != Integer.parseInt(elem.getHeureFinEpreuve()))
-						{
-							
-							Planning.setValueAt(elem.getNomSession(), k, (2*test-16));
-							Planning.setValueAt(elem.getNomSession(), k, (2*test-17));
-							test++;
-						}
-					}
+        			if (elem.getHeureDebutEpreuve().equals(Planning.getValueAt(0, k)))
+    				{
+        				for (int l = 1; l < longeur; l++) 
+        				{
+            				if (elem.getDateSession().equals(Planning.getValueAt(l, 0)))
+            				{
+            						Planning.setValueAt(elem.getNomSession(), l, k);
+            					
+            				}
+    				}
+        			
+    				}
 				}  
             }
         } 
