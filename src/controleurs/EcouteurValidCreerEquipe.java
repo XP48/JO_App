@@ -29,6 +29,7 @@ public class EcouteurValidCreerEquipe implements ActionListener {
 		data.InputPays.setText("");
 		page.refreshListe();
 		page.main.updateUI();
+		
 	}
 
 }
