@@ -23,9 +23,6 @@ public class Epreuve implements Serializable{
 	private int idEpreuve;
 	protected String nomEpreuve;
 	private static int nbEpreuve = 0;
-	private Medaille Medaille;
-	
-	
 	
 
 	//--------------------------

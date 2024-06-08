@@ -5,7 +5,10 @@ import javax.swing.*;
 import modeles.*;
 import vues.*;
 import controleurs.*;
-
+ 
+/**
+ * Classe app ou se situe le main de l'application
+ */
 
 public class app {
 

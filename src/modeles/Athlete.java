@@ -9,10 +9,6 @@ import java.io.*;
  */
 
 public class Athlete implements Serializable {
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	//--------------------------
 	// ATTRIBUTS
@@ -81,8 +77,5 @@ public class Athlete implements Serializable {
 	public String getPrenomAthlete() {
 		return this.prenomAthlete;
 	}	
-	
-
-	
 	
 }

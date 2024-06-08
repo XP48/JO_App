@@ -68,8 +68,6 @@ public class AjoutAthlete {
 			buttons.add(CreerAthlete);
 			buttons.add(SupprimerAthlete);
 			buttons.add(AjouterAthlete);
-			//main.add(titre, BorderLayout.CENTER);
-			//main.add(listeAthlete, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune équipe
 			refreshListe();
 			main.add(buttons, BorderLayout.EAST);
 			

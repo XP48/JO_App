@@ -43,11 +43,8 @@ public class EcouteurJListeSession implements ListSelectionListener {
 
 		BorderLayout layout = (BorderLayout) page.main.getLayout();
         Component westComponent = layout.getLayoutComponent(BorderLayout.WEST);
-        if(westComponent != null) {
-        	page.main.remove(westComponent);
-        }
+        if(westComponent != null) page.main.remove(westComponent);
         
-		
 		infos.setLayout(new GridLayout(4,1));
 		
 		nom.setText("Nom : " + elem.getNomSession());

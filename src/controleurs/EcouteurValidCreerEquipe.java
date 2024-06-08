@@ -7,7 +7,8 @@ import vues.*;
 import modeles.*;
 import App.app;
 /**
- *  @author Antonin
+ * Classe Ecouteur du bouton valider de la création d'une equipe
+ *  @author alances
  */
 public class EcouteurValidCreerEquipe implements ActionListener {
 	//--------------------------

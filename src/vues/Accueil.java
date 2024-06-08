@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import controleurs.*;
 
 /**
+ * Classe accueil 
  *  @author Antonin
  */
 
@@ -19,7 +20,7 @@ public class Accueil extends JPanel {
 	
 	
 	public JPanel main = new JPanel();
-	
+	Planning plan = new Planning();
 	public JPanel top = new JPanel();
 	
 	//--------------------------
@@ -36,7 +37,6 @@ public class Accueil extends JPanel {
 		
 		EcouteurBtnEpreuve clickEpreuve = new EcouteurBtnEpreuve(this);
 		
-		//EcouteurBtnEpreuve clickEpreuve = new EcouteurBtnEpreuve(this); !!!!! à décomenter
 		main.setLayout(new BorderLayout());
 		
 		top.setLayout(new BorderLayout());
@@ -49,8 +49,8 @@ public class Accueil extends JPanel {
 		
 		Accueil = new JButton("Accueil");
 		Accueil.addActionListener(clickPlanning);
-		
-		
+		this.changeView(plan.main);
+		plan.rempliTableau();
 		
 		top.add(Equipes, BorderLayout.WEST);
 		top.add(Accueil, BorderLayout.CENTER);

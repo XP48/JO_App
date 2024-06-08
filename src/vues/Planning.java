@@ -7,7 +7,7 @@ import controleurs.*;
 import modeles.*;
 
 /**
- * 
+ * Vue Planning
  *  @author ifonse1
  */
 
@@ -103,7 +103,6 @@ public class Planning extends JPanel {
                     {
                  	 for (int l = 1; l < longeur; l++) 
                          {
-                    		 System.out.println("cest ici");
                              if (elem.getDateSession().equals(Planning.getValueAt(l, 0)))
                              {
                                      Planning.setValueAt(elem.getNomSession(), l, k);

@@ -62,9 +62,7 @@ public class PageEpreuves extends JPanel{
 			buttons.add(CreerEpreuve);
 			buttons.add(SupprimerEpreuve);
 			buttons.add(CreerSession);
-			
-			//main.add(titre, BorderLayout.CENTER);
-			//main.add(listeEpreuve, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune épreuve
+
 			refreshListe();
 
 			

@@ -38,7 +38,7 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 			JFrame app = new JFrame("JO_APP");
 			
 			// Taille de la fenetre
-			app.setSize(500, 900);
+			app.setSize(1000, 350);
 			
 			AjoutAthlete acc = new AjoutAthlete(indiceEquipe, app, ec);
 			

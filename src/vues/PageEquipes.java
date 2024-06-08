@@ -56,8 +56,7 @@ public class PageEquipes extends JPanel{
 			buttons.add(SupprimerEquipe);
 			buttons.add(AjouterAthlete);
 			
-			//main.add(titre, BorderLayout.CENTER);
-			//main.add(listeEquipe, BorderLayout.CENTER); INUTILE pour l'instant car au départ il n'y a aucune équipe
+			
 			refreshListe();
 
 			

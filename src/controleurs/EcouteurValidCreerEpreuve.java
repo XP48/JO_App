@@ -8,7 +8,7 @@ import modeles.*;
 import App.app;
 
 /**
- * Classe EcouteurValidCreerEpreuve
+ * Classe ecouteur du bouton valider de la creation d'une epreuve
  * @author aksanti
  *
  */

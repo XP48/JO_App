@@ -7,7 +7,8 @@ import vues.*;
 import modeles.*;
 import App.app;
 /**
- *  @author Antonin
+ * Classe Ecouteur du bouton Valider de la création d'une session
+ *  @author alances
  */
 public class EcouteurValidCreerSession implements ActionListener {
 	//--------------------------
