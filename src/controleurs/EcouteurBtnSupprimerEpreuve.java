@@ -9,7 +9,7 @@ import modeles.Session;
 import vues.*;
 
 /**
- * Classe EcouteurBtnSupprimerEpreuve
+ * Classe Ecouteur du bouton supprimer Epreuve
  * @author aksanti
  *
  */

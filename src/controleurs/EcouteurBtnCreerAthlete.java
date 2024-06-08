@@ -7,8 +7,10 @@ import javax.swing.*;
 import modeles.Athlete;
 import modeles.Pays;
 import vues.*;
+
 /**
- *  @author Antonin
+ * Classe ecouteur du bouton creer Athlete
+ *  @author alances
  */
 public class EcouteurBtnCreerAthlete implements ActionListener {
 	//--------------------------
@@ -38,6 +40,10 @@ public class EcouteurBtnCreerAthlete implements ActionListener {
 		page.main.updateUI();
 	}
 	
+	/**
+	 * Cette methode sert a creer un athlete depuis l'application
+	 * @param input
+	 */
 	private void creerAthlete(JPanel input) {
 		
 		container.removeAll();

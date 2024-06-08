@@ -4,7 +4,8 @@ import java.awt.event.ActionListener;
 import vues.*;
 
 /**
- *  @author Antonin
+ * Classe ecouteur du bouton accueil
+ *  @author alances
  */
 public class EcouteurBtnAccueil implements ActionListener {
 
@@ -17,7 +18,7 @@ public class EcouteurBtnAccueil implements ActionListener {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
-
+	
 	public EcouteurBtnAccueil(Accueil old) {
 		this.old = old;
 	}

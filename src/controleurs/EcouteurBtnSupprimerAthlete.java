@@ -9,7 +9,8 @@ import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
 /**
- *  @author Antonin
+ * Classe Ecouteur du bouton Supprimer athlete
+ *  @author alances
  */
 public class EcouteurBtnSupprimerAthlete implements ActionListener {
 	//--------------------------
@@ -20,6 +21,10 @@ public class EcouteurBtnSupprimerAthlete implements ActionListener {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/*
+	 *Constructeur de l'affichage de la liste des athletes
+	 */
 	public EcouteurBtnSupprimerAthlete(JList<String> list, AjoutAthlete page) {
 		this.list = list;
 		this.page = page;
@@ -33,5 +38,4 @@ public class EcouteurBtnSupprimerAthlete implements ActionListener {
 			page.main.updateUI();
 		}
 	}
-	
 }

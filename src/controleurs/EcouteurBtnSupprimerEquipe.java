@@ -8,7 +8,8 @@ import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
 /**
- *  @author Antonin
+ * Classe Ecouteur du bouton Supprimer Equipe
+ *  @author alances
  */
 public class EcouteurBtnSupprimerEquipe implements ActionListener {
 	//--------------------------

@@ -16,7 +16,7 @@ public class app {
 		
 		
 		// Taille de la fenetre
-		app.setSize(1920, 1080);
+		app.setSize(1400, 800);
 		
 		// Pour pouvoir fermer la fenetre
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

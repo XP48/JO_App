@@ -13,7 +13,8 @@ import vues.*;
 import modeles.*;
 import App.app;
 /**
- *  @author Antonin
+ * Classe ecouteur de la JListe equipe
+ *  @author alances
  */
 public class EcouteurJListeEquipe implements ListSelectionListener {
 	//--------------------------
@@ -29,6 +30,12 @@ public class EcouteurJListeEquipe implements ListSelectionListener {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Ce constructeur permet d'afficher la liste des equipes
+	 * @param listeEquipe 
+	 * @param page
+	 */
 	public EcouteurJListeEquipe(JList<String> listeEquipe, PageEquipes page) {
 		this.page = page;
 		this.listeEquipe = listeEquipe;
@@ -36,6 +43,9 @@ public class EcouteurJListeEquipe implements ListSelectionListener {
 		nom.setEditable(false);
 		pays.setEditable(false);
 	}
+	/**
+	 * Cette methode permet de mettre a jour la vue Equipe
+	 */
 	public void valueChanged(ListSelectionEvent e) {
 		changerAffichage();
 		page.SupprimerEquipe.setEnabled(true);
@@ -49,6 +59,7 @@ public class EcouteurJListeEquipe implements ListSelectionListener {
 		EcouteurBtnAjoutAthlete clickAjoutAthlete = new EcouteurBtnAjoutAthlete(listeEquipe, page, listeEquipe.getSelectedIndex(), this);
 		page.AjouterAthlete.addActionListener(clickAjoutAthlete);
 	}
+	
 	public void changerAffichage() {
 		listeAthlete = "";
 		Equipe elem = Equipe.lesEquipes.get(listeEquipe.getSelectedIndex());

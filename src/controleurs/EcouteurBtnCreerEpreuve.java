@@ -10,7 +10,7 @@ import modeles.Session;
 import vues.*;
 
 /**
- * Classe EcouteurBtnCreerEpreuve
+ * Classe Ecouteur du bouton Creer Epreuve
  * @author aksanti
  *
  */
@@ -34,7 +34,10 @@ public class EcouteurBtnCreerEpreuve implements ActionListener {
 		creerEpreuve(page.main);
 		page.main.updateUI();
 	}
-	
+	/**
+	 * Cette methode permet de créer une Epreuve depuis l'application
+	 * @param input
+	 */
 	private void creerEpreuve(JPanel input) {
 		
 		BorderLayout layout = (BorderLayout) page.main.getLayout();

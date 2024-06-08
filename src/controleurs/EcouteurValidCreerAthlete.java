@@ -7,7 +7,8 @@ import vues.*;
 import modeles.*;
 import App.app;
 /**
- *  @author Antonin
+ * Classe Ecouteur du bouton valider de la creation d'un athlete
+ *  @author alances
  */
 public class EcouteurValidCreerAthlete implements ActionListener {
 	//--------------------------

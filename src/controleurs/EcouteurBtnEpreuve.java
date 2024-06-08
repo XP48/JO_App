@@ -19,6 +19,10 @@ public class EcouteurBtnEpreuve implements ActionListener {
 	PageEpreuves pEpreuve = new PageEpreuves();
 	Accueil old;
 	
+	/**
+	 * Constructeur de la page Epreuve apres appuis sur bouton epreuve dans la nav bar
+	 * @param old
+	 */
 	public EcouteurBtnEpreuve(Accueil old) {
 		this.old = old;
 	}

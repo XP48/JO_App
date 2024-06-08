@@ -16,7 +16,8 @@ import vues.*;
 import modeles.*;
 import App.app;
 /**
- *  @author Antonin
+ * Classe ecouteur de la JListe des session
+ *  @author alances
  */
 public class EcouteurJListeSession implements ListSelectionListener {
 	//--------------------------

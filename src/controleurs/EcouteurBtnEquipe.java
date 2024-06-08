@@ -16,6 +16,11 @@ public class EcouteurBtnEquipe implements ActionListener {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Constructeur de la nouvelle fenetre apres appuis sur le bouton Equipe de la nav bar
+	 * @param old
+	 */
 	public EcouteurBtnEquipe(Accueil old) {
 		this.old = old;
 	}

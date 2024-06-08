@@ -14,7 +14,7 @@ import modeles.*;
 import App.app;
 
 /**
- * Classe EcouteurJListeEpreuve
+ * Classe Ecouteur de la JListe des epreuves
  * @author aksanti
  *
  */
@@ -30,9 +30,10 @@ public class EcouteurJListeEpreuve implements ListSelectionListener {
 		this.page = page;
 		this.liste = liste;
 	}
+	/**
+	 * Cette methode permet de mettre a jour afficher dans la jliste des session si l'equipe selectionner est modifier
+	 */
 	public void valueChanged(ListSelectionEvent e) {
-		//(((JList<String>)(e.getSource())).getSelectedValuesList())
-		//btn.setEnabled(true);;
 		Epreuve elem = Epreuve.lesEpreuves.get(liste.getSelectedIndex());
 		String[] tabSessions = new String[(elem.sesSession).size()];
 		

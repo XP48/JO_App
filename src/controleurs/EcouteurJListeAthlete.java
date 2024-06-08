@@ -11,13 +11,15 @@ import vues.*;
 import modeles.*;
 import App.app;
 /**
- *  @author Antonin
+ * Classe Ecouteur de la JListe Athlete
+ *  @author alances
  */
 public class EcouteurJListeAthlete implements ListSelectionListener {
 	//--------------------------
 	// ATTRIBUTS
 	//--------------------------
 	AjoutAthlete page;
+	
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------

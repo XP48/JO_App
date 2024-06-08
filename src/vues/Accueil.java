@@ -25,6 +25,10 @@ public class Accueil extends JPanel {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Constructeur de la page d'acceuil
+	 */
 	public Accueil() {
 		EcouteurBtnEquipe clickEquipe = new EcouteurBtnEquipe(this);
 		

@@ -9,6 +9,7 @@ import modeles.Pays;
 import vues.*;
 
 /**
+ * Classe ecouteur du bouton ajoute Athlete
  *  @author Antonin
  */
 public class EcouteurBtnAjoutAthlete implements ActionListener {
@@ -43,10 +44,6 @@ public class EcouteurBtnAjoutAthlete implements ActionListener {
 			
 			app.add(acc.main);
 			app.setVisible(true);
-			
-			//Equipe.lesEquipes.remove(index);
-			//page.refreshListe();
-			//page.main.updateUI();
 		}
 	}
 	

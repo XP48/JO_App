@@ -9,7 +9,8 @@ import modeles.Equipe;
 import modeles.Pays;
 import vues.*;
 /**
- *  @author Antonin
+ * Classe ecouteur du bouton ajout Athlete de la page Equipe
+ *  @author alances
  */
 public class EcouteurBtnAjoutAthleteToEquipe implements ActionListener {
 	

@@ -10,7 +10,8 @@ import modeles.Session;
 import vues.*;
 
 /**
- *  @author Antonin
+ * Classe de l'ecouteur du bouton Creer session
+ *  @author alances
  */
 public class EcouteurBtnCreerSession implements ActionListener {
 	//--------------------------
@@ -31,6 +32,12 @@ public class EcouteurBtnCreerSession implements ActionListener {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Copnstructeur du pop up en bas de la page aprés appuie sur ajouter une session
+	 * @param page
+	 * @param index
+	 */
 	public EcouteurBtnCreerSession(PageEpreuves page, int index) {
 		this.index = index;
 		this.page = page;
@@ -57,6 +64,10 @@ public class EcouteurBtnCreerSession implements ActionListener {
 		page.main.updateUI();
 	}
 	
+	/**
+	 * Cette methode permet de creer une session depuis l'application
+	 * @param input
+	 */
 	private void creerSession(JPanel input) {
 		
 		container.removeAll();

@@ -7,7 +7,8 @@ import controleurs.*;
 import modeles.*;
 
 /**
- *  @author Iliann
+ * 
+ *  @author ifonse1
  */
 
 public class Planning extends JPanel {
@@ -23,6 +24,10 @@ public class Planning extends JPanel {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	
+	/**
+	 * Constructeur de planning
+	 */
 	public Planning() {
 		
 		main.setLayout(new BorderLayout());
@@ -36,7 +41,9 @@ public class Planning extends JPanel {
 	// METHODES
 	//--------------------------
 
-
+	/**
+	 * Methode pour remplir le tableau sur l'acceuil
+	 */
 	
 	public void rempliTableau() 
 	{
@@ -85,27 +92,32 @@ public class Planning extends JPanel {
 		Planning.setValueAt("19h30", 0, 22);
 		
 		
-        for (int i = 0; i < Epreuve.lesEpreuves.size(); i++) 
+		for (int i = 0; i < Epreuve.lesEpreuves.size(); i++) 
         {
-        	for (int j = 0; j < Epreuve.lesEpreuves.get(i).sesSession.size(); j++) 
-        	{
-        		Session elem = Epreuve.lesEpreuves.get(i).sesSession.get(j);
-        		for (int k = 1; k < hauteur; k++) 
-				{
-        			if (elem.getHeureDebutEpreuve().equals(Planning.getValueAt(0, k)))
-    				{
-        				for (int l = 1; l < longeur; l++) 
-        				{
-            				if (elem.getDateSession().equals(Planning.getValueAt(l, 0)))
-            				{
-            						Planning.setValueAt(elem.getNomSession(), l, k);
-            					
-            				}
-    				}
-        			
-    				}
-				}  
+            for (int j = 0; j < Epreuve.lesEpreuves.get(i).sesSession.size(); j++) 
+            {
+                Session elem = Epreuve.lesEpreuves.get(i).sesSession.get(j);
+                for (int k = 1; k < hauteur; k++) 
+                {
+                    if (elem.getHeureDebutEpreuve().equals(Planning.getValueAt(0, k)))
+                    {
+                 	 for (int l = 1; l < longeur; l++) 
+                         {
+                    		 System.out.println("cest ici");
+                             if (elem.getDateSession().equals(Planning.getValueAt(l, 0)))
+                             {
+                                     Planning.setValueAt(elem.getNomSession(), l, k);
+                                     int m=k;
+                                     while(!Planning.getValueAt(0,m).equals(elem.getHeureFinEpreuve())){
+                                     	Planning.setValueAt(elem.getNomSession(), l, m);
+                                         m++;
+                                     }
+                             }
+                     }
+
+                    }
+                }
             }
-        } 
+        }  
 	}
 }

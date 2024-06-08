@@ -25,6 +25,10 @@ public class EcouteurBtnCreerEquipe implements ActionListener {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------
+	/**
+	 * Constructeur de l'ecouteur du bouton Creer Equipe
+	 * @param page
+	 */
 	public EcouteurBtnCreerEquipe(PageEquipes page) {
 		this.page = page;
 		this.valider = new JButton("Valider");
@@ -39,6 +43,10 @@ public class EcouteurBtnCreerEquipe implements ActionListener {
 		page.main.updateUI();
 	}
 	
+	/**
+	 * Cette methode permet de creer une equipe depuis l'application
+	 * @param input
+	 */
 	private void creerEquipe(JPanel input) {
 		
 		BorderLayout layout = (BorderLayout) page.main.getLayout();

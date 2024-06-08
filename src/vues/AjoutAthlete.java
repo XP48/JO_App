@@ -42,6 +42,13 @@ public class AjoutAthlete {
 	//--------------------------
 	// CONSTRUCTEUR
 	//--------------------------	
+	
+	/**
+	 *  Constructeur de la page athlete
+	 * @param indice Entier representant l'indice de l'athlete
+	 * @param app
+	 * @param e 
+	 */
 	public AjoutAthlete(int indice, JFrame app, EcouteurJListeEquipe e) {
 			
 			this.e = e;
@@ -72,6 +79,9 @@ public class AjoutAthlete {
 	// METHODES
 	//--------------------------
 
+	/**
+	 * Methode pour rafraichir la liste des Athletes
+	 */
 	public void refreshListe() {
 		main.remove(listeAthlete);
 		String[] tabAthletes = new String[(Athlete.lesAthletes).size()];
